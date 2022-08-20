@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
-            "content": "msg = &quot;Hello world&quot; print(msg) . Hello world .",
-            "url": "https://toby-leeder.github.io/CSPFastpages/2022/08/20/First-thing.html",
-            "relUrl": "/2022/08/20/First-thing.html",
+            "title": "First Thing",
+            "content": "What even is this? . This is a thing. Duh. To be honest I don&#39;t really know what it is I&#39;m just trying something. We&#39;ll see how it goes I guess. . msg = &quot;Hello world&quot; print(msg) . . Hello world .",
+            "url": "https://toby-leeder.github.io/CSPFastpages/jupyter/2022/08/20/First.html",
+            "relUrl": "/jupyter/2022/08/20/First.html",
             "date": " • Aug 20, 2022"
         }
         
