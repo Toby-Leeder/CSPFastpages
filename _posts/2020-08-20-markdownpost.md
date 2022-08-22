@@ -21,3 +21,8 @@ It's really just a markdown post. It's actually less letters than a markdown thi
 ## I just put a lot of dividers there
 
 because why not
+
+{% include info.html text="this is a picture of among us" %}
+
+![]({{ site.baseurl }}/images/amongus.jpeg "among us")
+
