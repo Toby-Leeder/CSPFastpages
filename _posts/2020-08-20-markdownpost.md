@@ -26,3 +26,5 @@ because why not
 
 ![]({{ site.baseurl }}/images/amongus.jpeg "among us")
 
+![]({{ site.baseurl }}/images/among-us-twerk.gif "amongst us")
+
