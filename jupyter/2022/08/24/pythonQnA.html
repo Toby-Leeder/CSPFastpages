@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -157,9 +157,11 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
 
-<span class="n">qnumber</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#initialize variables</span>
+<span class="n">qnumber</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#number of questions</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#number of correct answers</span>
 
+<span class="c1">#list of questions which each correspond with an answer</span>
 <span class="n">questions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"What command is used to include other functions that were previously developed?"</span><span class="p">,</span> 
             <span class="s2">"What command is used to evaluate correct or incorrect response in this example?"</span><span class="p">,</span> 
             <span class="s2">"Each 'if' command contains an '_________' to determine a true or false condition?"</span><span class="p">,</span>
@@ -168,6 +170,7 @@ window.onload = wrap_img;
             <span class="s2">"What is the square root of 169?"</span><span class="p">,</span>
             <span class="s2">"What is the command to output a line of text?"</span>
             <span class="p">]</span>
+<span class="c1">#list of answers which each correspond with a question</span>
 <span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"import"</span><span class="p">,</span>
             <span class="s2">"if"</span><span class="p">,</span>
             <span class="s2">"expression"</span><span class="p">,</span>
@@ -183,15 +186,15 @@ window.onload = wrap_img;
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#asks for an input as the answer</span>
     <span class="k">return</span> <span class="n">msg</span> <span class="c1">#returns the input</span>
 
-<span class="k">def</span> <span class="nf">rsp</span> <span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">correctAnswer</span><span class="p">):</span> <span class="c1">#function to check if the answer is correct</span>
-    <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="n">correctAnswer</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is correct"</span><span class="p">)</span>
-        <span class="k">return</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#returns 1 if correct</span>
+<span class="k">def</span> <span class="nf">rsp</span> <span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">correctAnswer</span><span class="p">):</span> <span class="c1">#function to check if the answer is correct, has both the input and the correct answer as the parameters</span>
+    <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="n">correctAnswer</span><span class="p">:</span> <span class="c1">#checks if your answer is correct</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is correct"</span><span class="p">)</span> 
+        <span class="k">return</span> <span class="mi">1</span> <span class="c1">#returns 1 if correct</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is incorrect! The correct answer is "</span> <span class="o">+</span> <span class="n">correctAnswer</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#returns 0 if false</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is incorrect! The correct answer is "</span> <span class="o">+</span> <span class="n">correctAnswer</span><span class="p">)</span> 
+        <span class="k">return</span> <span class="mi">0</span> <span class="c1">#returns 0 if false</span>
 
-<span class="k">def</span> <span class="nf">whatGrade</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">whatGrade</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span> <span class="c1">#determines what letter grade you get based on your percent and returns the letter as a string (includes a/an because it's dependent on the letter)</span>
     <span class="k">if</span> <span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"an A"</span>
     <span class="k">if</span> <span class="mi">80</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">90</span><span class="p">:</span>
@@ -201,18 +204,22 @@ window.onload = wrap_img;
     <span class="k">if</span> <span class="mi">60</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">70</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"a D"</span>
     <span class="k">if</span>  <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">:</span>
-
         <span class="k">return</span> <span class="s2">"an F"</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+<span class="c1">#start of the test</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="n">rsp</span><span class="p">(</span><span class="n">question_with_response</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">answers</span><span class="p">[</span><span class="n">qnumber</span><span class="p">])</span>
-    <span class="n">qnumber</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1">#code that runs a for loop for each question</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span> 
+    <span class="n">correct</span> <span class="o">+=</span> <span class="n">rsp</span><span class="p">(</span><span class="n">question_with_response</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">answers</span><span class="p">[</span><span class="n">qnumber</span><span class="p">])</span> <span class="c1">#asks the questions which corresponds with the correct answer. If you get it correct it adds 1 and if you get it wrong it adds 0</span>
+    <span class="n">qnumber</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#increases the question number. After the request for the response so the "answers" list starts at 0</span>
 
+<span class="c1">#rounds the correct number to a percent</span>
 <span class="n">cnumber</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">qnumber</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"%, you got "</span> <span class="o">+</span> <span class="n">whatGrade</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">)</span>
+
+<span class="c1">#prints your final score and letter grade</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"%, you got "</span> <span class="o">+</span> <span class="n">whatGrade</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">)</span> <span class="c1">#finds the username of the current user, rounds their score to the nearest tenth and gives you a letter grade</span>
 </pre></div>
 
     </div>
@@ -235,14 +242,14 @@ if is correct
 Question: Each 'if' command contains an '_________' to determine a true or false condition?
 expression is correct
 Question: What language are you using?
-? is incorrect! The correct answer is english
+English is incorrect! The correct answer is english
 Question: What language am I using?
-jav is incorrect! The correct answer is python
+java is incorrect! The correct answer is python
 Question: What is the square root of 169?
-13 is correct
+12 is incorrect! The correct answer is 13
 Question: What is the command to output a line of text?
-print is correct
-tobyleeder you scored 71.43%, you got a C.
+pringle is incorrect! The correct answer is print
+tobyleeder you scored 42.86%, you got an F.
 </pre>
 </div>
 </div>
