@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -127,7 +127,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-QnA">Python QnA<a class="anchor-link" href="#Python-QnA"> </a></h1><blockquote><p>I made a QnA, will you pass?</p>
+<h1 id="Python-QnA">Python QnA<a class="anchor-link" href="#Python-QnA"> </a></h1><blockquote><p>I made a QnA, the code is down there.</p>
 </blockquote>
 <ul>
 <li>toc:true - badges: true</li>
@@ -141,7 +141,7 @@ window.onload = wrap_img;
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
+<details class="description" open="">
       <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
         <p><div class="input">
 
@@ -185,9 +185,16 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">whatGrade</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span>
     <span class="k">if</span> <span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;you get an A&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;an A&quot;</span>
     <span class="k">if</span> <span class="mi">80</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">90</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;you get a B&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;a B&quot;</span>
+    <span class="k">if</span> <span class="mi">70</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;a C&quot;</span>
+    <span class="k">if</span> <span class="mi">60</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">70</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;a D&quot;</span>
+    <span class="k">if</span>  <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="s2">&quot;an F&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; running &quot;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
@@ -197,7 +204,7 @@ window.onload = wrap_img;
     <span class="n">qnumber</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="n">cnumber</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">qnumber</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; you scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; you scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%, you got &quot;</span> <span class="o">+</span> <span class="n">whatGrade</span><span class="p">(</span><span class="n">cnumber</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -220,14 +227,14 @@ if is correct
 Question: Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?
 expression is correct
 Question: What language are you using?
-english is correct
+? is incorrect! The correct answer is english
 Question: What language am I using?
-java is incorrect! The correct answer is python
+jav is incorrect! The correct answer is python
 Question: What is the square root of 169?
 13 is correct
 Question: What is the command to output a line of text?
 print is correct
-tobyleeder you scored 85.71%
+tobyleeder you scored 71.43%, you got a C.
 </pre>
 </div>
 </div>
