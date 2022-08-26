@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Hi. My name is Toby. I do a little bit of CS every once and a while (that's why I'm here) and I like doing it. I don't know a lot but I'm looking forward to learning more! - August 26, 2022
 
 
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
