@@ -2,9 +2,10 @@
 layout: page
 title: Notes
 permalink: /notes/
+description: This is my notes pages, I plan on putting a lot of the things I learn and some important syntax in here as well as in the notebook which demonstrates my learning. That means most of the information here can be found somewhere else, but it will all be organized and in one place on this page. 
 ---
 
-# Python Learns
+## Python Learns
 > Also in the pythonQnA post
 
 I've had very little experience with Python before I used it so here's some of the new functionality I learned and the syntax for it.
