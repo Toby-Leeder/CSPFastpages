@@ -84,26 +84,48 @@
   
 
   
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
+      ,"page3": {
+          "title": "Notes",
+          "content": "",
+          "url": "https://toby-leeder.github.io/CSPFastpages/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
   
 
   
   
 
   
-      ,"page10": {
+
+  
+  
+
+  
+
+  
+      ,"page8": {
+          "title": "Vocabulary",
+          "content": "",
+          "url": "https://toby-leeder.github.io/CSPFastpages/Vocab/",
+          "relUrl": "/Vocab/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://toby-leeder.github.io/CSPFastpages/robots.txt",
