@@ -9,7 +9,7 @@ toc: true
 
 
 ## Python Learns
-> Also in the [Python QnA](https://toby-leeder.github.io/CSPFastpages/jupyter/2022/08/24/pythonQnA.html) post.
+> Also in the [QnA w/Python](https://toby-leeder.github.io/CSPFastpages/newcode/2022/08/24/pythonQnA.html) post.
 
 I've had very little experience with Python before I used it so here's some of the new functionality I learned and the syntax for it.
 
@@ -20,7 +20,7 @@ I've had very little experience with Python before I used it so here's some of t
 | For loops | for newVar in definedVar: <br> code | For loops are probably the most different from Java. <br> This is because they go through a list of a variable <br> instead of creating a new integer and going until that <br> integer reaches a value. That interger is suprisingly <br> useful, so to me it seems like this change removes <br> some of the functionality of a for loop. Despite this <br> though I still found ways around it and was able <br> to accomplish my goals. 
 
 ## Bash Learns
-> Also in the [Checks w/Bash](https://toby-leeder.github.io/CSPFastpages/jupyter/2022/08/28/Checks.html) post.
+> Also in the [Checks w/Bash](https://toby-leeder.github.io/CSPFastpages/newcode/2022/08/28/Checks.html) post.
 
 I've had basically no experience with Bash before this so it was interesting to learn some of the new functionality now as well. Here is some of what I learned. 
 
