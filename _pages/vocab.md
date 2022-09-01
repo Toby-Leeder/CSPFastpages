@@ -7,7 +7,7 @@ toc: true
 ---
 {% include info.html text="This is a page where I will record the vocabulary that I learn throughout this course. " %}
 
-- variable
+- Variable
 	- a way to store data
 	- can be put into different categories
 	- Primitive Types
@@ -28,3 +28,5 @@ toc: true
 	- language used for some parts of fastpages
 - Liquid 
 	- Language used to build the tags page
+- Procedural Abstraction
+	- this is confusing for me. Essentially its a procedure of abstracting out functions to higher levels. For example, if we have a multiplication function and we run that function we don't care how it multiplies the numbers we input, we just want it to multiply the numbers. This is procedurally abstracting the process to the lowest level of computations. 
