@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: my first markdown post
-categories: [markdown]
+categories: [week_0]
 title: Is this gonna work?
 ---
 
