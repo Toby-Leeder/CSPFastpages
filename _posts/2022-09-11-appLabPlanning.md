@@ -41,4 +41,4 @@ title: AppLab Plans
 > this is where I takl about everything that is not really working
 
 - The first thing that I just figured out was how to call a table. Ideally my code is abstract, so I want it all to be in functions which run repeatedly with a table. The first part of that though is accessing the data in a table. The only way to do this that I found is use a getColumn function which returns a list of all the entries in the column which you can then access using basic list syntax. I didn't know that you could use basic list syntax though and it took me a bit to figure that out. 
--
+- another thing
