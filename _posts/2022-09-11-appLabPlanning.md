@@ -41,4 +41,7 @@ title: AppLab Plans
 > this is where I takl about everything that is not really working
 
 - The first thing that I just figured out was how to call a table. Ideally my code is abstract, so I want it all to be in functions which run repeatedly with a table. The first part of that though is accessing the data in a table. The only way to do this that I found is use a getColumn function which returns a list of all the entries in the column which you can then access using basic list syntax. I didn't know that you could use basic list syntax though and it took me a bit to figure that out. 
-- another thing
+- Another thing that went wrong was I made a mistake and started off with the initial question number being 1. This meant that it started with entry number 1 in the table. At the beginning I just added in two table entrys so I didn't notics this the entire time. This became an issue when I was trying to test mutiplt questions. The second question kept not loading and just saying undefined and it took me a bit to realize that this is because it was looking for a third entry that didn't exist and not the second entry. I got confused, but eventually figured it out.
+
+## Here it is
+Here is a [link](https://studio.code.org/projects/applab/DUHMgPqYC4f92GELpJyQ6LIVDpz53DX1N74Up5hjO2E) to my final app lab project
