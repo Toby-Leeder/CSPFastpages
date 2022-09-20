@@ -5,7 +5,7 @@ permalink: /Vocab/
 description: This is a page where I will record the vocabulary that I learn throughout this course. 
 toc: true
 ---
-{% include info.html text="This is a page where I will record the vocabulary that I learn throughout this course. " %}
+This is a page where I will record the vocabulary that I learn throughout this course. 
 
 - Variable
 	- a way to store data
