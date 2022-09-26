@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Table w/Javascript and w/HTML | Toby-Leeder-CSPFastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Table w/Javascript and w/HTML" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Here’s my first table and really my first thing using HTML and JS" />
+<meta property="og:description" content="Here’s my first table and really my first thing using HTML and JS" />
+<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/week_5/2022/09/25/Javascript_stuff.html" />
+<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/week_5/2022/09/25/Javascript_stuff.html" />
+<meta property="og:site_name" content="Toby-Leeder-CSPFastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Table w/Javascript and w/HTML" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-25T00:00:00-05:00","datePublished":"2022-09-25T00:00:00-05:00","description":"Here’s my first table and really my first thing using HTML and JS","headline":"Table w/Javascript and w/HTML","mainEntityOfPage":{"@type":"WebPage","@id":"https://toby-leeder.github.io/CSPFastpages/week_5/2022/09/25/Javascript_stuff.html"},"url":"https://toby-leeder.github.io/CSPFastpages/week_5/2022/09/25/Javascript_stuff.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSPFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://toby-leeder.github.io/CSPFastpages/feed.xml" title="Toby-Leeder-CSPFastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSPFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSPFastpages/">Toby-Leeder-CSPFastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSPFastpages/about/">About Me</a><a class="page-link" href="/CSPFastpages/notes/">Notes</a><a class="page-link" href="/CSPFastpages/search/">Search</a><a class="page-link" href="/CSPFastpages/categories/">Tags</a><a class="page-link" href="/CSPFastpages/timeline/">Timeline</a><a class="page-link" href="/CSPFastpages/Vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Table w/Javascript and w/HTML</h1><p class="page-description">Here's my first table and really my first thing using HTML and JS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-25T00:00:00-05:00" itemprop="datePublished">
+        Sep 25, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSPFastpages/categories/#week_5">week_5</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#IJavaScript-and-Table-formatting-using-toHTML-method">IJavaScript and Table formatting using toHTML method </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-25-Javascript_stuff.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logIt</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logItType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">output</span><span class="p">,</span> <span class="s2">";"</span><span class="p">,</span> <span class="nx">output</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a function to hold data for a Person</span>
+<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="p">,</span> <span class="nx">grade</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">=</span> <span class="nx">ghID</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">=</span> <span class="nx">classOf</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">grade</span> <span class="o">=</span> <span class="nx">grade</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// define a setter for role in Person data</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setRole</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="nx">role</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setGrade</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grade</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">grade</span> <span class="o">=</span> <span class="nx">grade</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// define a JSON conversion "method" associated with Person</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// make a new Person and assign to variable teacher</span>
+<span class="kd">var</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Mr M"</span><span class="p">,</span> <span class="s2">"jm1021"</span><span class="p">,</span> <span class="mf">1977</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span>  <span class="c1">// before role</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// ok to do this even though role is not yet defined</span>
+
+<span class="c1">// make another New person</span>
+<span class="kd">var</span> <span class="nx">toby</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Toby"</span><span class="p">,</span> <span class="s2">"toby-leeder"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">);</span>
+<span class="nx">toby</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Leeder Of The Friend Group"</span><span class="p">)</span>
+<span class="nx">toby</span><span class="p">.</span><span class="nx">setGrade</span><span class="p">(</span><span class="s2">"11"</span><span class="p">)</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">toby</span><span class="p">);</span>
+
+<span class="c1">// output of Object and JSON/string associated with Teacher</span>
+<span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>   <span class="c1">// set the role</span>
+<span class="nx">teacher</span><span class="p">.</span><span class="nx">setGrade</span><span class="p">(</span><span class="s2">"Not In School"</span><span class="p">)</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span> 
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>object ; Person {
+  name: 'Mr M',
+  ghID: 'jm1021',
+  classOf: 1977,
+  role: '',
+  grade: undefined }
+string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":""}
+object ; Person {
+  name: 'Toby',
+  ghID: 'toby-leeder',
+  classOf: 2024,
+  role: 'Leeder Of The Friend Group',
+  grade: '11' }
+object ; Person {
+  name: 'Mr M',
+  ghID: 'jm1021',
+  classOf: 1977,
+  role: 'Teacher',
+  grade: 'Not In School' }
+string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a student Array of Person(s)</span>
+<span class="kd">var</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span> 
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Anthony"</span><span class="p">,</span> <span class="s2">"tonyhieu"</span><span class="p">,</span> <span class="mf">2023</span><span class="p">,</span> <span class="s2">"12"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Bria"</span><span class="p">,</span> <span class="s2">"B-G101"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Allie"</span><span class="p">,</span> <span class="s2">"xiaoa0"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tigran"</span><span class="p">,</span> <span class="s2">"Tigran7"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Rebecca"</span><span class="p">,</span> <span class="s2">"Rebecca-123"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Vidhi"</span><span class="p">,</span> <span class="s2">"unknown"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"12"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Toby"</span><span class="p">,</span> <span class="s2">"toby-leeder"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Bailey"</span><span class="p">,</span> <span class="s2">"N/A"</span><span class="p">,</span> <span class="mf">2026</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">)</span>
+<span class="p">];</span>
+
+<span class="c1">// define a classroom and build Classroom objects and json</span>
+<span class="kd">function</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">teacher</span><span class="p">,</span> <span class="nx">students</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
+    <span class="c1">// start Classroom with Teacher</span>
+    <span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>
+    <span class="nx">teacher</span><span class="p">.</span><span class="nx">setGrade</span><span class="p">(</span><span class="s2">"Not in school"</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">teacher</span> <span class="o">=</span> <span class="nx">teacher</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="nx">teacher</span><span class="p">];</span>
+    <span class="c1">// add each Student to Classroom</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">students</span> <span class="o">=</span> <span class="nx">students</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">students</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">student</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">student</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Student"</span><span class="p">);</span> <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">student</span><span class="p">);</span> <span class="p">});</span>
+    <span class="c1">// build json/string format of Classroom</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">person</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">json</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()));</span>
+<span class="p">}</span>
+
+<span class="c1">// make a CompSci classroom from formerly defined teacher and students</span>
+<span class="nx">compsci</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">teacher</span><span class="p">,</span> <span class="nx">students</span><span class="p">);</span>
+
+<span class="c1">// output of Objects and JSON in CompSci classroom</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">);</span>  <span class="c1">// constructed classroom object</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// abstract 1st objects name</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">json</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>  <span class="c1">// show json conversion of 1st object to string</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">json</span><span class="p">[</span><span class="mf">0</span><span class="p">]));</span>  <span class="c1">// show JSON.parse inverse of JSON.stringify</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>object ; [ Person {
+    name: 'Mr M',
+    ghID: 'jm1021',
+    classOf: 1977,
+    role: 'Teacher',
+    grade: 'Not in school' },
+  Person {
+    name: 'Anthony',
+    ghID: 'tonyhieu',
+    classOf: 2023,
+    role: 'Student',
+    grade: '12' },
+  Person {
+    name: 'Bria',
+    ghID: 'B-G101',
+    classOf: 2024,
+    role: 'Student',
+    grade: '11' },
+  Person {
+    name: 'Allie',
+    ghID: 'xiaoa0',
+    classOf: 2024,
+    role: 'Student',
+    grade: '11' },
+  Person {
+    name: 'Tigran',
+    ghID: 'Tigran7',
+    classOf: 2024,
+    role: 'Student',
+    grade: '11' },
+  Person {
+    name: 'Rebecca',
+    ghID: 'Rebecca-123',
+    classOf: 2024,
+    role: 'Student',
+    grade: '11' },
+  Person {
+    name: 'Vidhi',
+    ghID: 'unknown',
+    classOf: 2024,
+    role: 'Student',
+    grade: '12' },
+  Person {
+    name: 'Toby',
+    ghID: 'toby-leeder',
+    classOf: 2024,
+    role: 'Student',
+    grade: '11' },
+  Person {
+    name: 'Bailey',
+    ghID: 'N/A',
+    classOf: 2026,
+    role: 'Student',
+    grade: '9' } ]
+string ; Mr M
+string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
+object ; { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' }
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IJavaScript-and-Table-formatting-using-toHTML-method">
+<a class="anchor" href="#IJavaScript-and-Table-formatting-using-toHTML-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>IJavaScript and Table formatting using toHTML method<a class="anchor-link" href="#IJavaScript-and-Table-formatting-using-toHTML-method"> </a>
+</h3>
+<p>This example builds a <mark>Classroom method _toHTML</mark> which is passed to the IJavaScript interpreter $$.html which renders output similarly to a real website.</p>
+<ul>
+<li>JavaScript in the _toHTML method is broken into three parts...<ul>
+<li>Style part is building CSS inline formatting</li>
+<li>Body part is constructing the Table Rows (tr), Table Headings (th), and Table Data (td).  The table data is obtained from a Classroom object.  The JavaScript for loop allows the construction of a new row of data for each person object in the Array.</li>
+<li>Return part creates the HTML fragment for rendering</li>
+</ul>
+</li>
+<li>The last line in the example <mark>$$.html is IJavaScript HTML interpreter</mark> and by passing the parameter of the _toHTML method it obtains HTML to render</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define an HTML conversion "method" associated with Classroom</span>
+<span class="nx">Classroom</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// HTML Style is build using inline structure</span>
+  <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">"display:inline-block;"</span> <span class="o">+</span>
+    <span class="s2">"border: 2px solid grey;"</span> <span class="o">+</span>
+    <span class="s2">"box-shadow: 0.8em 0.4em 0.4em grey;"</span>
+  <span class="p">);</span>
+
+  <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
+  <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+  <span class="c1">// Heading for Array Columns</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"GitHub ID"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Class Of"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Grade"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
+  <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">of</span> <span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// tr for each row, a new line</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
+    <span class="c1">// td for each column of data</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">role</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">grade</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="c1">// tr to end line</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
+  <span class="p">}</span>
+
+   <span class="c1">// Build and HTML fragment of div, table, table body</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="s2">"&lt;div style='"</span> <span class="o">+</span> <span class="nx">style</span> <span class="o">+</span> <span class="s2">"'&gt;"</span> <span class="o">+</span>
+      <span class="s2">"&lt;table&gt;"</span> <span class="o">+</span>
+        <span class="nx">body</span> <span class="o">+</span>
+      <span class="s2">"&lt;/table&gt;"</span> <span class="o">+</span>
+    <span class="s2">"&lt;/div&gt;"</span>
+  <span class="p">);</span>
+
+<span class="p">};</span>
+
+<span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
+<span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="display:inline-block;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;"><table>
+<tr>
+<th><mark>Name</mark></th>
+<th><mark>GitHub ID</mark></th>
+<th><mark>Class Of</mark></th>
+<th><mark>Role</mark></th>
+<th><mark>Grade</mark></th>
+<th>&lt;/tr&gt;</th>
+</tr>
+<tr>
+<td>Mr M</td>
+<td>jm1021</td>
+<td>1977</td>
+<td>Teacher</td>
+<td>Not in school</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Anthony</td>
+<td>tonyhieu</td>
+<td>2023</td>
+<td>Student</td>
+<td>12</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Bria</td>
+<td>B-G101</td>
+<td>2024</td>
+<td>Student</td>
+<td>11</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Allie</td>
+<td>xiaoa0</td>
+<td>2024</td>
+<td>Student</td>
+<td>11</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Tigran</td>
+<td>Tigran7</td>
+<td>2024</td>
+<td>Student</td>
+<td>11</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Rebecca</td>
+<td>Rebecca-123</td>
+<td>2024</td>
+<td>Student</td>
+<td>11</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Vidhi</td>
+<td>unknown</td>
+<td>2024</td>
+<td>Student</td>
+<td>12</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Toby</td>
+<td>toby-leeder</td>
+<td>2024</td>
+<td>Student</td>
+<td>11</td>
+</tr>
+<tr></tr>
+<tr>
+<td>Bailey</td>
+<td>N/A</td>
+<td>2026</td>
+<td>Student</td>
+<td>9</td>
+</tr>
+<tr>&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    
+
+&lt;/div&gt;
+ 
+
+</tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+  </div><a class="u-url" href="/CSPFastpages/week_5/2022/09/25/Javascript_stuff.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSPFastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CSPFastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSPFastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/CSPFastpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/CSPFastpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
