@@ -6,6 +6,7 @@ categories: [week_3]
 title: AppLab Plans
 ---
 
+{% include nav_frontend.html %}
 ## Plans
 
  > To start, my applab will be a quiz. The questions will be about my robotics whatclub because I just wanted to come up with something random. 
