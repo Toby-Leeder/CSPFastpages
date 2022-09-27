@@ -5,6 +5,8 @@ permalink: /timeline/
 toc: true
 ---
 
+{% include nav_frontend.html %}
+
 | Week | Posts |
 |-|-|
 | 0 | [First Markdown](https://toby-leeder.github.io/CSPFastpages/week_0/2020/08/20/markdownpost.html), [First Jupyter Notebook](https://toby-leeder.github.io/CSPFastpages/week_0/2022/08/20/First.html), [Second Jupyter Notebook](https://toby-leeder.github.io/CSPFastpages/week_0/2022/08/20/Second.html) |
