@@ -5,6 +5,8 @@ description: This blog is about the first Collegeboard quizes I took
 categories: [week_6]
 title: Collegeboard Quizes
 ---
+
+![]({{ site.baseurl }}/images/college-board-quiz.png)
 ## Collaboration Quiz
 > Score: 3/3
 This quiz was interesting, but easy. The last question I wasn't sure on because it was correct on a technicality but I did get it right. While users could help identify errors they made, the couldn't fix it.
