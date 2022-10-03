@@ -5,7 +5,6 @@ permalink: /timeline/
 toc: true
 ---
 
-{% include nav_frontend.html %}
 
 | Week | Posts |
 |-|-|
