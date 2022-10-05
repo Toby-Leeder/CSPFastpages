@@ -5,6 +5,7 @@ description: My notes after my first python assignment.
 categories: [notes]
 title: Python Notes
 permalink: /notes/python1
+hide: true
 ---
 
 {% include nav_frontend.html %}
