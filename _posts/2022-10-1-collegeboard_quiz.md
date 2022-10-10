@@ -7,6 +7,8 @@ title: Collegeboard Quizes
 ---
 
 ![]({{ site.baseurl }}/images/college-board-quiz.png)
+
+# Week 6
 ## Collaboration Quiz
 > Score: 3/3
 This quiz was interesting, but easy. The last question I wasn't sure on because it was correct on a technicality but I did get it right. While users could help identify errors they made, the couldn't fix it.
@@ -18,3 +20,8 @@ This was the hardest quiz for sure. The fifth question had some code that was pr
 ## Program Design and Development Quiz
 > Score: 3/3
 This quiz was pretty easy overall. The only thing that I was confused on is that indexes for collegeboard start at 1. This means that arrays start at 1 and not zero so one question about switching the valuesin an array was a little weird. 
+
+# Week 7
+## Copy of Identifying and Correcting Errors Quiz
+> Score: 2/3
+This quiz was the hardest one I'd had up to this point. It was the first one I got something wrong, but that was because I didn't read that there were 2 answers. It doesn't really make sense to me though. These situations are really unrealistic I feel, you don't really end up with code like that which is just completely non-functional at a fundamental level.
