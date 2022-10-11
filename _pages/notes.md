@@ -5,7 +5,7 @@ permalink: /notes/
 toc: true
 ---
 
-{% include nav_frontend.html %}
+{% include nav_notes.html %}
 
 This is my notes pages, I plan on putting a lot of the things I learn and some important syntax in here as well as in the notebook which demonstrates my learning. That means most of the information here can be found somewhere else, but it will all be organized and in one place on this page.
 

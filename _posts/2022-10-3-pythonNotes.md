@@ -8,7 +8,7 @@ permalink: /notes/python1
 hide: true
 ---
 
-{% include nav_frontend.html %}
+{% include nav_notes.html %}
 
 ## Python Learns
 > Also in the [QnA w/Python](https://toby-leeder.github.io/CSPFastpages/newcode/2022/08/24/pythonQnA.html) post.
