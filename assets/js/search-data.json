@@ -17,7 +17,7 @@
             "content": "table&gt; | Home | Home | . &lt;/table&gt; . import requests #IMDB API endpoint to get a users bio url = &quot;https://imdb8.p.rapidapi.com/actors/get-bio&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;070652e641mshef3b7431c30b633p174936jsn56763374d512&quot;, &quot;X-RapidAPI-Host&quot;: &quot;imdb8.p.rapidapi.com&quot; } a = 1 def actorCheck(fav, a): if (fav.lower() != &quot;toby leeder&quot; and a &lt;= 5): fav = input(wrongBruh(a)) a += 1 actorCheck(fav, a) else: return &quot;Toby Leeder&quot; def wrongBruh(a): if a == 1: return &quot;Ok lets try this again. Pick your favorite actor who&#39;s name starts with T&quot; elif a == 2: return &quot;Ok ok, they&#39;re pretty good, but what about your favorite actor who&#39;s name starts with Toby?&quot; elif a == 3: return &quot;OK that&#39;s closer, try another Toby.&quot; elif a == 4: return &quot;Wrong. Did You mean Toby Leeder? I think you meant Toby Leeder. It&#39;s ok. Try again.&quot; elif a == 5: return &quot;Thats it I&#39;m chosing for you.&quot; favActor = input(&quot;Write the name of your favorite actor&quot;) favActor = actorCheck(favActor, a) querystring = {&quot;nconst&quot;:&quot;nm5927244&quot;} tobySearch = requests.request(&quot;GET&quot;, url, headers=headers, params=querystring) print(tobySearch.json().get(&quot;name&quot;)) print(tobySearch.json().get(&quot;miniBios&quot;)[0].get(&quot;text&quot;)) . Toby Leeder Toby Leeder is known for Chuck Hank and the San Diego Twins (2022), The Call (2020) and Love XO (2022). .",
             "url": "https://toby-leeder.github.io/CSPFastpages/api/thing",
             "relUrl": "/api/thing",
-            "date": " • Oct 6, 2022"
+            "date": " • Oct 10, 2022"
         }
         
     
