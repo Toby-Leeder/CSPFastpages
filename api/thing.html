@@ -153,6 +153,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+
 <span class="c1">#IMDB API endpoint to get a users bio</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://imdb8.p.rapidapi.com/actors/get-bio&quot;</span>
 
@@ -191,8 +193,11 @@ window.onload = wrap_img;
 <span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nconst&quot;</span><span class="p">:</span><span class="s2">&quot;nm5927244&quot;</span><span class="p">}</span>
 <span class="n">tobySearch</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is your favorite actors name and bio!&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tobySearch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tobySearch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;miniBios&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">))</span>
+<span class="n">tobyImage</span> <span class="o">=</span> <span class="n">tobySearch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is the link to the image of toby you see below: &quot;</span> <span class="o">+</span> <span class="n">tobyImage</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -205,8 +210,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Toby Leeder
+<pre>Here is your favorite actors name and bio!
+Toby Leeder
 Toby Leeder is known for Chuck Hank and the San Diego Twins (2022), The Call (2020) and Love XO (2022).
+Here is the link to the image of toby you see below: https://m.media-amazon.com/images/M/MV5BNmJjZDVjMWUtMTY2ZS00NDc4LTgwMGYtNjNmZTc1YzhkMWZiXkEyXkFqcGdeQXVyNDY0MDQ4MDg@._V1_.jpg
 </pre>
 </div>
 </div>
@@ -217,6 +224,13 @@ Toby Leeder is known for Chuck Hank and the San Diego Twins (2022), The Call (20
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://m.media-amazon.com/images/M/MV5BNmJjZDVjMWUtMTY2ZS00NDc4LTgwMGYtNjNmZTc1YzhkMWZiXkEyXkFqcGdeQXVyNDY0MDQ4MDg@._V1_.jpg" alt="" title="among us" /></p>
+
+</div>
+</div>
+</div>
 </div>
 
 
