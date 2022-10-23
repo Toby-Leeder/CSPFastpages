@@ -6,7 +6,6 @@ categories: [week 9]
 title: Fetching jokes thing
 ---
 
-{% include nav_data.html %}
 
 <!-- HTML table fragment for page -->
 <table>
@@ -33,7 +32,7 @@ title: Fetching jokes thing
   const BOOHOO = "boohoo";
 
   // prepare fetch urls
-  const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  const url = "https://tngc.nighthawkcodescrums.gq/api/jokes";
   const like_url = url + "/like/";  // haha reaction
   const jeer_url = url + "/jeer/";  // boohoo reaction
 
