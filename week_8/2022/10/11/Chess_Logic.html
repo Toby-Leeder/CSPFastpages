@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -261,28 +261,30 @@ window.onload = wrap_img;
         <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1</span>
 
         <span class="nx">totalMoves</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">chessBoard</span><span class="p">[</span><span class="nx">c</span><span class="p">][</span><span class="mf">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;OO&quot;</span><span class="p">){</span>
-                <span class="nx">obstructedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
-                <span class="nx">index</span><span class="o">++</span>
-                <span class="nx">totalMoves</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-                    <span class="k">try</span><span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]){</span>
-                            <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
-                        <span class="p">}</span>
-                        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]){</span>
-                            <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span> <span class="k">catch</span><span class="p">{}</span>
-                    <span class="k">try</span><span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])){</span>
-                            <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
-                        <span class="p">}</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])){</span>
-                            <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span> <span class="k">catch</span><span class="p">{}</span>
-                <span class="p">})</span>
-            <span class="p">}</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obstructedMoves</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">c</span><span class="p">)){</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">chessBoard</span><span class="p">[</span><span class="nx">c</span><span class="p">][</span><span class="mf">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;OO&quot;</span><span class="p">){</span>
+                    <span class="nx">obstructedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+                    <span class="nx">index</span><span class="o">++</span>
+                    <span class="nx">totalMoves</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="k">try</span><span class="p">{</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]){</span>
+                                <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+                            <span class="p">}</span>
+                            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">1</span><span class="p">]){</span>
+                                <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span> <span class="k">catch</span><span class="p">{}</span>
+                        <span class="k">try</span><span class="p">{</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])){</span>
+                                <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+                            <span class="p">}</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nx">lettersOnBoard</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">obstructedMoves</span><span class="p">[</span><span class="nx">index</span><span class="p">][</span><span class="mf">0</span><span class="p">])){</span>
+                                <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span> <span class="k">catch</span><span class="p">{}</span>
+                    <span class="p">})</span>
+                <span class="p">}</span> 
+            <span class="p">}</span>
         <span class="p">})</span>
 
         <span class="nx">blockedMoves</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">obstructedMoves</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c</span><span class="p">);})</span>
@@ -371,13 +373,16 @@ window.onload = wrap_img;
 <span class="kd">let</span> <span class="nx">rook1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">rook</span><span class="p">(</span><span class="s2">&quot;d5&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">);</span>
 <span class="nx">chessBoard</span><span class="p">[</span><span class="nx">rook1</span><span class="p">.</span><span class="nx">position</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">rook1</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="nx">rook1</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">rook1</span><span class="p">]</span>
 
-<span class="kd">let</span> <span class="nx">rook2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">rook</span><span class="p">(</span><span class="s2">&quot;c5&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">rook2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">rook</span><span class="p">(</span><span class="s2">&quot;e5&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
 <span class="nx">chessBoard</span><span class="p">[</span><span class="nx">rook2</span><span class="p">.</span><span class="nx">position</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">rook2</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="nx">rook2</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">rook2</span><span class="p">]</span>
 
-<span class="kd">let</span> <span class="nx">rook3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">rook</span><span class="p">(</span><span class="s2">&quot;d6&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">rook3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">rook</span><span class="p">(</span><span class="s2">&quot;f5&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
 <span class="nx">chessBoard</span><span class="p">[</span><span class="nx">rook3</span><span class="p">.</span><span class="nx">position</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">rook3</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="nx">rook3</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">rook3</span><span class="p">]</span>
 
+<span class="nx">printBoard</span><span class="p">()</span>
 
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rook1</span><span class="p">.</span><span class="nx">getAvailableMoves</span><span class="p">())</span>
 
 <span class="c1">//console.log(rook1.getFreeMoves())</span>
 </pre></div>
@@ -392,10 +397,16 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[ &#39;d6&#39;, &#39;c5&#39; ]
-[ &#39;d6&#39;, &#39;c5&#39;, &#39;d7&#39;, &#39;d8&#39;, &#39;a5&#39;, &#39;b5&#39; ]
-[ &#39;d1&#39;, &#39;d2&#39;, &#39;d3&#39;, &#39;d4&#39;, &#39;e5&#39;, &#39;f5&#39;, &#39;g5&#39;, &#39;h5&#39; ]
-[ &#39;d1&#39;, &#39;d2&#39;, &#39;d3&#39;, &#39;d4&#39;, &#39;e5&#39;, &#39;f5&#39;, &#39;g5&#39;, &#39;h5&#39;, &#39;d6&#39;, &#39;c5&#39; ]
+<pre>
+OO OO OO OO OO OO OO OO 
+OO OO OO OO OO OO OO OO 
+OO OO OO OO OO OO OO OO 
+OO OO OO OO bR OO OO OO 
+OO OO OO OO wR OO OO OO 
+OO OO OO OO wR OO OO OO 
+OO OO OO OO OO OO OO OO 
+OO OO OO OO OO OO OO OO 
+[ &#39;d1&#39;, &#39;d2&#39;, &#39;d3&#39;, &#39;d4&#39;, &#39;d6&#39;, &#39;d7&#39;, &#39;d8&#39;, &#39;a5&#39;, &#39;b5&#39;, &#39;c5&#39;, &#39;e5&#39; ]
 </pre>
 </div>
 </div>
@@ -638,7 +649,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[ &#39;d6&#39;, &#39;c5&#39; ]
+<pre>[ &#39;e5&#39; ]
 </pre>
 </div>
 </div>
