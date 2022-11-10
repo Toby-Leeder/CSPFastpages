@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: This blog is about the first Collegeboard quizes I took
+description: This blog is about the Night At The Museum
 categories: [week_6]
-title: Collegeboard Quizes
+title: Night at the Museum
 ---
 
 ## Ceramics
