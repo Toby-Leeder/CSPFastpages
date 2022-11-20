@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
 <meta property="og:description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
-<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/2022/07/07/PBL-binary.html" />
-<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/2022/07/07/PBL-binary.html" />
+<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/2022/11/15/binaryStuff.html" />
+<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/2022/11/15/binaryStuff.html" />
 <meta property="og:site_name" content="Toby-Leeder-CSPFastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-07-07T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-11-15T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Binary Math" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-07T00:00:00-05:00","datePublished":"2022-07-07T00:00:00-05:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","mainEntityOfPage":{"@type":"WebPage","@id":"https://toby-leeder.github.io/CSPFastpages/2022/07/07/PBL-binary.html"},"url":"https://toby-leeder.github.io/CSPFastpages/2022/07/07/PBL-binary.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-15T00:00:00-06:00","datePublished":"2022-11-15T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","mainEntityOfPage":{"@type":"WebPage","@id":"https://toby-leeder.github.io/CSPFastpages/2022/11/15/binaryStuff.html"},"url":"https://toby-leeder.github.io/CSPFastpages/2022/11/15/binaryStuff.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSPFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://toby-leeder.github.io/CSPFastpages/feed.xml" title="Toby-Leeder-CSPFastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSPFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -88,6 +88,7 @@ window.onload = wrap_img;
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
                 <th>Minus</th>
+                <th>Change Bits</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -96,82 +97,46 @@ window.onload = wrap_img;
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                <td><input type="input" id="addBit" /></td>
             </tr>
             </table>
         </div>
-        <div class="col-12">
-            
-             
-            <table class="table">
-            <tr>
-                
-                
-                <td><img class="img-responsive py-3" id="bulb0" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt0" onclick="javascript:toggleBit(0)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb1" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt1" onclick="javascript:toggleBit(1)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb2" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt2" onclick="javascript:toggleBit(2)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb3" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt3" onclick="javascript:toggleBit(3)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb4" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt4" onclick="javascript:toggleBit(4)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb5" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt5" onclick="javascript:toggleBit(5)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb6" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt6" onclick="javascript:toggleBit(6)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb7" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt7" onclick="javascript:toggleBit(7)">Turn on</button>
-                </td>
-                
-            </tr>
-            <tr>
-                
-                
-                <td><input type="text" id="digit0" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit1" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit2" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit3" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit4" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit5" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit6" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit7" value="0" size="1" readonly="" /></td>
-                
-            </tr>
+        <div class="col-12" id="whereDaTable">
+            <table class="table" id="bitHolder">
+                <tr>
+                    <td><img class="img-responsive py-3" id="bulb" src="/CSPFastpages/images/bulb_off.png" alt="" width="40" height="Auto" />
+                        <button type="button" id="butt" onclick="javascript:toggleBit()">Turn on</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="digit" value="0" size="1" readonly="" /></td>
+                </tr>
             </table>
         </div>
     </div>
 </div>
 
 <script>
-    const BITS = 8;
-    const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
     const IMAGE_ON = "/CSPFastpages/images/bulb_on.gif";
     const MSG_OFF = "Turn off";
     const IMAGE_OFF = "/CSPFastpages/images/bulb_off.png"
+    makeBits(1)
+    const inp = document.getElementById("addBit");
+    inp.addEventListener("keyup", function() {
+        event.preventDefault
+        if (event.key === "Enter") {
+            makeBits(inp.value)
+        }
+    })// Thanks Aiden, XOXO
 
+
+    function setBits(bitNum){
+        var BITS = bitNum;
+        console.log(BITS)
+        var MAX = 2 ** BITS - 1;
+        return [BITS, MAX]
+    }
     // return string with current value of each bit
     function getBits() {
         let bits = "";
@@ -216,13 +181,13 @@ window.onload = wrap_img;
         const butt = document.getElementById('butt' + i);
         // Change digit and visual
         if (image.src.match(IMAGE_ON)) {
-        dig.value = 0;
-        image.src = IMAGE_OFF;
-        butt.innerHTML = MSG_ON;
+            dig.value = 0;
+            image.src = IMAGE_OFF;
+            butt.innerHTML = MSG_ON;
         } else {
-        dig.value = 1;
-        image.src = IMAGE_ON;
-        butt.innerHTML = MSG_OFF;
+            dig.value = 1;
+            image.src = IMAGE_ON;
+            butt.innerHTML = MSG_OFF;
         }
         // Binary numbers
         const binary = getBits();
@@ -234,9 +199,9 @@ window.onload = wrap_img;
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
-        decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+            decimal = MAX < decimal + n ? 0 : decimal += n; // OVERFLOW or PLUS
         } else  {     // MINUS
-        decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
+            decimal = 0 > decimal + n ? MAX : decimal += n; // OVERFLOW or MINUS
         }
         // convert the result back to binary
         binary = decimal_2_base(decimal, 2);
@@ -244,15 +209,52 @@ window.onload = wrap_img;
         setConversions(binary);
         // update bits
         for (let i = 0; i < binary.length; i++) {
-        let digit = binary.substr(i, 1);
-        document.getElementById('digit' + i).value = digit;
-        if (digit === "1") {
-            document.getElementById('bulb' + i).src = IMAGE_ON;
-            document.getElementById('butt' + i).innerHTML = MSG_OFF;
-        } else {
-            document.getElementById('bulb' + i).src = IMAGE_OFF;
-            document.getElementById('butt' + i).innerHTML = MSG_ON;
+            let digit = binary.substr(i, 1);
+            document.getElementById('digit' + i).value = digit;
+            if (digit === "1") {
+                document.getElementById('bulb' + i).src = IMAGE_ON;
+                document.getElementById('butt' + i).innerHTML = MSG_OFF;
+            } else {
+                document.getElementById('bulb' + i).src = IMAGE_OFF;
+                document.getElementById('butt' + i).innerHTML = MSG_ON;
+            }
         }
+    }
+    // updates the html to change bits
+    function makeBits(bitNum){
+        BITS = setBits(bitNum)[0]
+        MAX = setBits(bitNum)[1]
+        document.getElementById("bitHolder").remove()
+        const TABLE = document.createElement('table')
+        TABLE.id = "bitHolder";
+        whereDaTable.appendChild(TABLE)
+        const row1 = TABLE.insertRow(0)
+        for (let i = 0; i < bitNum; i++){
+            var x = row1.insertCell(-1)
+            var img = document.createElement('img')
+            img.src = "/CSPFastpages/images/bulb_off.png"
+            img.class = "img-responsive py-3"
+            img.id = "bulb" + i;
+            img.alt = ""
+            img.width = "40"
+            img.height = "95.63"
+            x.appendChild(img);
+            var btn = document.createElement('button')
+            btn.type = "button"
+            btn.id = "butt" + i
+            btn.onclick = function(){toggleBit(i)}
+            btn.innerHTML = "Turn on"
+            x.appendChild(btn)
+        }
+        const row2 = TABLE.insertRow(1)
+        for (let i = 0; i < bitNum; i++){
+            var x = row2.insertCell(-1)
+            var input = document.createElement('input')
+            input.id = "digit" + i
+            input.size = "1";
+            input.readOnly = true;
+            x.appendChild(input)
+            document.getElementById("digit" + i).value = 0;
         }
     }
 </script>
