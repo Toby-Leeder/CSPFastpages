@@ -1,7 +1,7 @@
 ---
 title: Binary Math
-layout: default
-description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
+layout: post
+description: Binary stuff
 ---
 
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
