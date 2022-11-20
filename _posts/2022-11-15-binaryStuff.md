@@ -192,5 +192,6 @@ description: Binary stuff
             x.appendChild(input)
             document.getElementById("digit" + i).value = 0;
         }
+        add(0)
     }
 </script>
