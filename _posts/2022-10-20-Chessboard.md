@@ -132,7 +132,7 @@ title: Chess
         class piece{
             constructor(_position, _color){
                 this.position = _position;
-                this.color = _color
+                this.color = _color;
             }
             move(move, currentM){
                 let currentBoard = chessBoard[currentM];
@@ -143,8 +143,8 @@ title: Chess
                 }
             }
             getAvailableMoves(){
-                let freeMoves = this.getFreeMoves()
-                let captures = this.getAvailableCaptures()
+                let freeMoves = this.getFreeMoves()l
+                let captures = this.getAvailableCaptures()l
                 captures.forEach((c) => {
                     freeMoves.push(c);
                 })

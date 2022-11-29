@@ -56,22 +56,22 @@ description: Binary stuff
     const MSG_ON = "Turn on";
     const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
     const MSG_OFF = "Turn off";
-    const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
-    makeBits(1)
+    const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png";
+    makeBits(1);
     const inp = document.getElementById("addBit");
     inp.addEventListener("keyup", function() {
-        event.preventDefault
+        event.preventDefault;
         if (event.key === "Enter") {
-            makeBits(inp.value)
+            makeBits(inp.value);
         }
     })// Thanks Aiden, XOXO
 
 
     function setBits(bitNum){
         var BITS = bitNum;
-        console.log(BITS)
+        console.log(BITS);
         var MAX = 2 ** BITS - 1;
-        return [BITS, MAX]
+        return [BITS, MAX];
     }
     // return string with current value of each bit
     function getBits() {
@@ -158,40 +158,40 @@ description: Binary stuff
     }
     // updates the html to change bits
     function makeBits(bitNum){
-        BITS = setBits(bitNum)[0]
-        MAX = setBits(bitNum)[1]
-        document.getElementById("bitHolder").remove()
-        const TABLE = document.createElement('table')
+        BITS = setBits(bitNum)[0];
+        MAX = setBits(bitNum)[1];
+        document.getElementById("bitHolder").remove();
+        const TABLE = document.createElement('table');
         TABLE.id = "bitHolder";
-        whereDaTable.appendChild(TABLE)
-        const row1 = TABLE.insertRow(0)
+        whereDaTable.appendChild(TABLE);
+        const row1 = TABLE.insertRow(0);
         for (let i = 0; i < bitNum; i++){
-            var x = row1.insertCell(-1)
-            var img = document.createElement('img')
-            img.src = "{{site.baseurl}}/images/bulb_off.png"
-            img.class = "img-responsive py-3"
+            var x = row1.insertCell(-1);
+            var img = document.createElement('img');
+            img.src = "{{site.baseurl}}/images/bulb_off.png";
+            img.class = "img-responsive py-3";
             img.id = "bulb" + i;
-            img.alt = ""
-            img.width = "40"
-            img.height = "95.63"
+            img.alt = "";
+            img.width = "40";
+            img.height = "95.63";
             x.appendChild(img);
             var btn = document.createElement('button')
-            btn.type = "button"
-            btn.id = "butt" + i
+            btn.type = "button";
+            btn.id = "butt" + i;
             btn.onclick = function(){toggleBit(i)}
-            btn.innerHTML = "Turn on"
-            x.appendChild(btn)
+            btn.innerHTML = "Turn on";
+            x.appendChild(btn);
         }
         const row2 = TABLE.insertRow(1)
         for (let i = 0; i < bitNum; i++){
-            var x = row2.insertCell(-1)
-            var input = document.createElement('input')
-            input.id = "digit" + i
+            var x = row2.insertCell(-1);
+            var input = document.createElement('input');
+            input.id = "digit" + i;
             input.size = "1";
             input.readOnly = true;
-            x.appendChild(input)
+            x.appendChild(input);
             document.getElementById("digit" + i).value = 0;
         }
-        add(0)
+        add(0);
     }
 </script>
