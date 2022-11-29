@@ -223,7 +223,7 @@ window.onload = wrap_img;
         class piece{
             constructor(_position, _color){
                 this.position = _position;
-                this.color = _color
+                this.color = _color;
             }
             move(move, currentM){
                 let currentBoard = chessBoard[currentM];
@@ -234,8 +234,8 @@ window.onload = wrap_img;
                 }
             }
             getAvailableMoves(){
-                let freeMoves = this.getFreeMoves()
-                let captures = this.getAvailableCaptures()
+                let freeMoves = this.getFreeMoves()l
+                let captures = this.getAvailableCaptures()l
                 captures.forEach((c) => {
                     freeMoves.push(c);
                 })
