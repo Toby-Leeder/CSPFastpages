@@ -971,11 +971,11 @@ brown
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
     <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s2">&quot; Y/N&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">answer</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">solutions</span><span class="p">[</span><span class="n">qNum</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">answer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">solutions</span><span class="p">[</span><span class="n">qNum</span><span class="p">]:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">qNum</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">incorrect</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">answer</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">incorrect</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congrats you got a: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; That&#39;s a &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;%&quot;</span><span class="p">)</span>
@@ -993,7 +993,8 @@ brown
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Congrats you got a: 4/4 That&#39;s a 100.0%
+<pre>Congrats you got a: 3/4 That&#39;s a 75.0%
+For question #4, &#34;is Aiden a poopy butthead&#34;, you said &#34;n&#34;, but the correct answer was &#34;y&#34;
 </pre>
 </div>
 </div>
