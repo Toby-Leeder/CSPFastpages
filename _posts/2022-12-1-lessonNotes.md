@@ -24,7 +24,7 @@ description: Here are the notes I take for each lesson. They start out as not mu
     - substring() returns the characters from the string beginning at the first condition and ending at the second position
         - comparable to the : operator for indexes in python
     
-## Day 3, 
+## Day 3, Unit 3 Sections 5-7
 
 - Comparing lists
     - I didn't really know how comparing lists worked in python before 
