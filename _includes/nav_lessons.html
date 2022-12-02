@@ -1,11 +1,11 @@
 <table>
     <tr>
-        {% for post in site.notebooks %}
+        {% for notebook in site.notebooks %}
 
-            {% if post.categories contains "lesson" and post.hide != true %}
+            {% if notebook.categories contains "lesson" and notebook.hide != true %}
     
           <td>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ notebook.url }}">{{ notebook.title }}</a>
           </td>
     
             {% endif %}
