@@ -186,7 +186,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>  <span class="c1"># outer for loop. This runs on i which represents the row. range(len(matrix)) is in order to iterate through the length of the matrix</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>  <span class="c1"># inner for loop. This runs on the length of the i&#39;th row in the matrix (j changes for each row with a different length)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># [i][j] is the 2D location of that value in the matrix. [i] iterates to the specific row and [j] iterates to the specific value in the row. end=&quot; &quot; changes the end value to space, not a new line.</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># [i][j] is the 2D location of that value in the matrix, kinda like a coordinate pair. [i] iterates to the specific row and [j] iterates to the specific value in the row. end=&quot; &quot; changes the end value to space, not a new line.</span>
         <span class="nb">print</span><span class="p">()</span> <span class="c1"># prints extra line. this is in the outer loop, not the inner loop, because it only wants to print a new line for each row</span>
 </pre></div>
 
@@ -206,7 +206,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raw matrix (list of lists): &quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix printed using nested for loop iteration&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix printed using nested for loop iteration:&quot;</span><span class="p">)</span>
 <span class="n">print_matrix1</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 </pre></div>
