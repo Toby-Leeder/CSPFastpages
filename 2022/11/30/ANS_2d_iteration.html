@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -358,6 +358,55 @@ apples bananas grapes
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Find anotehr way to print a matrix. Use the iter() function you already learned</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix4</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="n">matrix_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
+        <span class="n">inner_matrix_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">matrix_iter</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">inner_matrix_iter</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="n">print_matrix4</span><span class="p">(</span><span class="n">keypad</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3 
+4 5 6 
+7 8 9 
+  0   
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -385,6 +434,43 @@ apples bananas grapes
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Easier solution I thought of later (I forgot about concatination)</span>
+<span class="n">month</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">keyboard</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">keyboard</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">month</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">month</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>March
+16
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -420,43 +506,6 @@ apples bananas grapes
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>March
 16</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Easier solution I thought of later (I forgot about concatination)</span>
-<span class="n">month</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">keyboard</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">age</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">keyboard</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">keyboard</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">month</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">month</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>March
-16
-</pre>
 </div>
 </div>
 
