@@ -13,8 +13,8 @@
   
     
         ,"post1": {
-            "title": "Title",
-            "content": "",
+            "title": "HW Iteration",
+            "content": "words = [&quot;alfa&quot;, &quot;bravo&quot;, &quot;charlie&quot;, &quot;delta&quot;, &quot;echo&quot;, &quot;foxtrot&quot;, &quot;golf&quot;, &quot;hotel&quot;, &quot;india&quot;, &quot;juliett&quot;, &quot;kilo&quot;, &quot;lima&quot;, &quot;mike&quot;, &quot;november&quot;, &quot;oscar&quot;, &quot;papa&quot;, &quot;quebec&quot;, &quot;romeo&quot;, &quot;sierra&quot;, &quot;tango&quot;, &quot;uniform&quot;, &quot;victor&quot;, &quot;whiskey&quot;, &quot;xray&quot;, &quot;yankee&quot;, &quot;zulu&quot;] inp = input().lower() .",
             "url": "https://toby-leeder.github.io/CSPFastpages/2022/12/05/final_Iteration_lesson.html",
             "relUrl": "/2022/12/05/final_Iteration_lesson.html",
             "date": " • Dec 5, 2022"
