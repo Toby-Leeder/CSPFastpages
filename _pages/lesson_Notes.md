@@ -1,9 +1,9 @@
 ---
 toc: false
-layout: post
+layout: page
 categories: [lessons]
 permalink: /lessonNotes
-title: Lesson notes
+title: Lesson Notes
 description: Here are the notes I take for each lesson. They start out as not much because I'm very familiar with these topics.
 ---
 
