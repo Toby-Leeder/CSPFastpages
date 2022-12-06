@@ -4,8 +4,10 @@
         <a> test table entry</a>
       </td>
         {% for notebook in site.notebooks %}
-
-            {% if notebook.categories contains "lessons" and notebook.hide != true %}
+          <td>
+            <a href="{{ notebook.url }}">{{ notebook.title }}</a>
+          </td>
+            {% if notebook.categories contains "lessons" %}
     
           <td>
             <a href="{{ notebook.url }}">{{ notebook.title }}</a>
