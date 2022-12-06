@@ -4,9 +4,7 @@
         <a> test table entry</a>
       </td>
         {% for notebook in site.posts %}
-        <td>
-          <a href="{{ notebook.url }}">{{ notebook.title }}</a>
-        </td>
+
             {% if notebook.categories contains "lessons" %}
     
           <td>
