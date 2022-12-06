@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 categories: [lessons]
 permalink: /lessonNotes
