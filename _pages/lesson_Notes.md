@@ -25,6 +25,9 @@ description: Here are the notes I take for each lesson. They start out as not mu
         - comparable to the : operator for indexes in python
     
 ## Day 3, Unit 3 Sections 5-7
-
+> Grade: 1/1
 - Comparing lists
     - I didn't really know how comparing lists worked in python before 
+
+## Day 3, Unit 3 Sections 8 and 10 
+> This was mine
