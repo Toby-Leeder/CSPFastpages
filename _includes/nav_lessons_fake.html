@@ -1,0 +1,37 @@
+<table>
+  {% assign POSTS = 0 %}
+  {% assign lessonNotes = 0 %}
+  {% assign cols = 0 %}
+  {% for notebook in site.posts %}
+    {% if notebook.categories contains "lessons" %}
+      {% assign POSTS = POSTS | plus: 1%}
+    {% endif %}
+  {% endfor %}
+  {% assign rows = POSTS | divided_by: 7 %}
+
+  {% for row in rows%}
+  {% assign cols = 0 %}
+    <tr>
+      {% if lessonNotes == 0 %}
+        <td>
+          <a href="{{ site.baseurl }}/lessonNotes">Lesson Notes</a>
+        </td>
+        {% assign lessonNotes = 1 %}
+        {% assign cols = cols | plus: 1 %}
+      {% endif %}
+
+        {% for notebook in site.posts %}
+            {% assign upperBound = 7 | times: row %}
+            {% assign lowerRow =  row | minus: 1  %}
+            {% assign lowerBound = 7 | times: lowerRow %}
+            {% if notebook.categories contains "lessons" and cols < upperBound and cols => lowerBound%}
+                <td>
+                  <a href="{{ site.baseurl }}{{ notebook.url }}">{{ notebook.title }}</a>
+                </td>
+                {% assign cols = cols | plus: 1 %}
+            {% endif %}
+    
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
