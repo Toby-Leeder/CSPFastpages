@@ -7,7 +7,7 @@ title: Lesson Notes
 description: Here are the notes I take for each lesson. They start out as not much because I'm very familiar with these topics.
 ---
 
-{% include nav_lessons_fake.html %}
+{% include nav_lessons.html %}
 ## Day 1, Unit 3 Sections 1-2
 > Grade: 1/1
 
