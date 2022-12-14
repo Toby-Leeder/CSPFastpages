@@ -345,23 +345,12 @@ PROCEDURE Dice(n)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-3
-3
-6
-3
-3
-6
-2
-4
-6
-6
-6
-3
-2
+<pre>5
+5
 1
-56
-The range is from 15 to 90
+1
+12
+The range is from 4 to 24
 </pre>
 </div>
 </div>
@@ -400,7 +389,7 @@ The range is from 15 to 90
 
 <span class="k">def</span> <span class="nf">generateList</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">nums</span>
 
@@ -412,7 +401,9 @@ The range is from 15 to 90
             <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">evens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">odds</span><span class="p">,</span> <span class="n">evens</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The odds are:&quot;</span><span class="p">,</span> <span class="n">odds</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The evens are:&quot;</span><span class="p">,</span> <span class="n">evens</span><span class="p">)</span>
+    <span class="k">return</span> 
 
 <span class="k">def</span> <span class="nf">findDerivative</span><span class="p">(</span><span class="n">fun</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">fun</span><span class="o">.</span><span class="n">deriv</span><span class="p">()</span>
@@ -449,13 +440,15 @@ The range is from 15 to 90
             <span class="n">finalList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">finalList</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">catAndDogify</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
 
 <span class="n">var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="n">var2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">findDerivative</span><span class="p">(</span><span class="n">var2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">derivAtPoint</span><span class="p">(</span><span class="n">var2</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sortEsandOs</span><span class="p">(</span><span class="mi">35</span><span class="p">))</span>
+<span class="n">catAndDogify</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -471,9 +464,40 @@ The range is from 15 to 90
 <pre>    3
 26 x + 4 x
 18990.0
-dog dog cat dog dog dog dog dog dog cat cat cat cat dog dog cat cat cat cat cat
+The odds are: [71, 7, 73, 17, 67, 43, 81, 7, 93, 69, 73, 83, 35, 39]
+The evens are: [24, 32, 8, 94, 70, 58, 2, 56, 28, 78, 12, 94, 74, 70, 72, 66, 70, 54, 28, 16, 54]
+None
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;dog&#39;,
+ &#39;dog&#39;,
+ &#39;dog&#39;,
+ &#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;cat&#39;,
+ &#39;cat&#39;,
+ &#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;cat&#39;,
+ &#39;cat&#39;,
+ &#39;cat&#39;,
+ &#39;dog&#39;,
+ &#39;dog&#39;]</pre>
+</div>
+
 </div>
 
 </div>
