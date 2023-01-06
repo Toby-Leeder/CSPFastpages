@@ -93,7 +93,7 @@ $ chruby 2.7.7
 If you get a different error (NOT the chruby not found error) or the error still doesn't go away try restarting from the beginning or send it on slack. 
 
 ## Step 7: Check your Gemfile
-Your gemfile should look like this:
+Your gemfile is a file in the root of your project that you copied from Mr. Mortensen. Open it in vscode and look for it and check if it looks like this:
 ```gem
 source "https://rubygems.org"
 
