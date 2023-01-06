@@ -102,12 +102,17 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h1"><a href="#what-do-you-do">What do you do</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#step-1-install-brew">Step 1: Install brew</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-install-brew-and-upgrade-brew">Step 1: Install brew and upgrade brew</a></li>
 <li class="toc-entry toc-h2"><a href="#step-2-install-ruby-manager-and-installer">Step 2: Install ruby manager and installer</a></li>
 <li class="toc-entry toc-h2"><a href="#step-3-install-ruby">Step 3: Install ruby</a></li>
 <li class="toc-entry toc-h2"><a href="#step-4-cd-into-your-directory">Step 4: cd into your directory</a></li>
 <li class="toc-entry toc-h2"><a href="#step-5-configure-your-shell">Step 5: Configure your shell</a></li>
-<li class="toc-entry toc-h2"><a href="#step-6-check-if-it-worked">Step 6: Check if it worked</a></li>
+<li class="toc-entry toc-h2"><a href="#step-6-check-if-it-worked">Step 6: Check if it worked</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#if-it-doesnt-say-277-run">If it doesn’t say 2.7.7 run:</a></li>
+<li class="toc-entry toc-h3"><a href="#if-that-says-chruby-not-found-or-something-along-those-lines-then-run">If that says chruby not found or something along those lines then run:</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#step-7-check-your-gemfile">Step 7: Check your Gemfile</a></li>
 <li class="toc-entry toc-h2"><a href="#step-8-install-bundler-if-you-havent-already">Step 8: Install bundler if you haven’t already</a></li>
 <li class="toc-entry toc-h2"><a href="#step-9-run-your-server">Step 9: Run your server</a></li>
@@ -121,8 +126,8 @@ window.onload = wrap_img;
 <h1 id="what-do-you-do">
 <a class="anchor" href="#what-do-you-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do you do</h1>
 
-<h2 id="step-1-install-brew">
-<a class="anchor" href="#step-1-install-brew" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Install brew</h2>
+<h2 id="step-1-install-brew-and-upgrade-brew">
+<a class="anchor" href="#step-1-install-brew-and-upgrade-brew" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Install brew and upgrade brew</h2>
 <p>First you need to install brew. Homebrew (brew) is a package manager which basically means it helps you install anything and everything that you need. You should already have brew, so I’m not going to get into steps to install it here. If you don’t have it installed go to this <a href="https://brew.sh/">link</a> and run the command under install.</p>
 
 <p>If you have brew then you need to make sure your brew is up to date. Run the following:</p>
@@ -172,11 +177,13 @@ window.onload = wrap_img;
 </code></pre></div></div>
 <p>If it says 2.7.7 then it worked and you can move on.</p>
 
-<p>If it doesn’t say 2.7.7 (either says some other version like 2.6.0 or says usr/bin or something along those lines) then run:</p>
+<h3 id="if-it-doesnt-say-277-run">
+<a class="anchor" href="#if-it-doesnt-say-277-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>If it doesn’t say 2.7.7 run:</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>chruby 2.7.7
 </code></pre></div></div>
 
-<p>If that says chruby not found or something along those lines then run:</p>
+<h3 id="if-that-says-chruby-not-found-or-something-along-those-lines-then-run">
+<a class="anchor" href="#if-that-says-chruby-not-found-or-something-along-those-lines-then-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>If that says chruby not found or something along those lines then run:</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"source ~/.bashrc"</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
 </code></pre></div></div>
 
@@ -193,7 +200,7 @@ window.onload = wrap_img;
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>chruby 2.7.7 
 </code></pre></div></div>
 
-<p>If you get a different error (NOT the chruby not found error) try restarting from the beginning or send it on slack.</p>
+<p>If you get a different error (NOT the chruby not found error) or the error still doesn’t go away try restarting from the beginning or send it on slack.</p>
 
 <h2 id="step-7-check-your-gemfile">
 <a class="anchor" href="#step-7-check-your-gemfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 7: Check your Gemfile</h2>
@@ -221,6 +228,8 @@ gem "github-pages", group: :jekyll_plugins
 <h2 id="persisting-errors">
 <a class="anchor" href="#persisting-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Persisting errors</h2>
 <p>If you try to run your server and you still get any errors, the first thing you should do is check that you’re using the correct ruby version in the correct directory (ruby -v) If you are then try all of these steps again from the beginning. If you still are getting errors send a message on slack and I can try to help you.</p>
+
+<p>In general however it is a good skill to be able to figure out some of the errors you get on your own. Read the error message, do what it says if there is a quick fix. Google error messages try to work through stuff if you think you’ll be able to.</p>
 
   </div><a class="u-url" href="/CSPFastpages/fixes/week_16/2023/01/06/stupidruby.html" hidden></a>
 </article>
