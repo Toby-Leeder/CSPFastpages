@@ -5,6 +5,7 @@ description: Easy steps to fix a lot of weird ruby and gems errors on M1 macs
 categories: [fixes, week_16]
 title: Ruby Fixes for M1 macs
 hide: false
+permalink: /rubyFixes
 ---
 
 # Introduction 
