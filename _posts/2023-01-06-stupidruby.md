@@ -10,6 +10,8 @@ hide: false
 # Introduction 
 Essentially the issue to my understanding is mac has a default ruby version which isn't compatiable for our uses. This isn't bad, but the problem arises when you want to switch to a different version of ruby. You need to change the path which your system uses for ruby. The way I did this was using Chruby. Chruby is a ruby manager which allows you to change which version of ruby you want. It's kind of overkill for our purposes, but it was the only thing I could get to work. 
 
+There are multiple prominent ruby managers and all of them will probably work. This is how to set up Chruby, but if you would like to look on your own for rvm or rbenv or something else entirely then you definitely can. Chruby is the simplest to use and understand. 
+
 # What do you do
 
 ## Step 1: Install brew and upgrade brew
