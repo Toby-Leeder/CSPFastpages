@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: Easy steps to fix a lot of weird ruby and gems errors on M1 macs
 categories: [fixes, week_16]
