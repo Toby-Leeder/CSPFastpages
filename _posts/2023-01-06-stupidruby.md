@@ -61,12 +61,12 @@ $ ruby -v
 ```
 If it says 2.7.7 then it worked and you can move on. 
 
-If it doesn't say 2.7.7 (either says some other version like 2.6.0 or says usr/bin or something along those lines) then run:
+### If it doesn't say 2.7.7 run:
 ```shell
 $ chruby 2.7.7
 ```
 
-If that says chruby not found or something along those lines then run:
+### If that says chruby not found or something along those lines then run:
 ```shell
 $ echo "source ~/.bashrc" >> ~/.bash_profile
 ```
@@ -87,7 +87,7 @@ Then restart the terminal and run:
 $ chruby 2.7.7 
 ```
 
-If you get a different error (NOT the chruby not found error) try restarting from the beginning or send it on slack. 
+If you get a different error (NOT the chruby not found error) or the error still doesn't go away try restarting from the beginning or send it on slack. 
 
 ## Step 7: Check your Gemfile
 Your gemfile should look like this:
