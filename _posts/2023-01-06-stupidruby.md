@@ -100,15 +100,19 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 ```
 Delete anything extra that you have.
-
-## Step 8: Install bundler if you haven't already
+## Step 8: Install Jekyll if you haven't already
+I didn't need to do this but some of you might. It doesn't hurt to run it anyway. Run:
+```shell
+$ gem insall jekyll
+```
+## Step 9: Install bundler if you haven't already
 These instructions are also given on the bundler website. Run:
 ```shell
 $ bundle install
 $ git add Gemfile Gemfile.lock
 ```
 
-## Step 9: Run your server
+## Step 10: Run your server
 Now you should be ready to run your server. Run:
 ```shell
 $ bundle exec jekyll serve
