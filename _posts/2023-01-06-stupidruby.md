@@ -48,7 +48,7 @@ You should know how to do this. cd into whatever directory has the local server 
 
 
 ## Step 5: Configure your shell
-My understanding of this is right now your computer wants to use the built in ruby version so we need to change it so that it uses the correct path. to do that run these three commands:
+My understanding of this is right now your computer wants to use the built in ruby version so we need to change it so that it uses the correct path. to do that run these three commands (don't worry when it doesn't say anything after you run the command, nothing is supposed to happen in terminal):
 ```shell
 $ echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
 $ echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
