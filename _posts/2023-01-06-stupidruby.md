@@ -16,7 +16,7 @@ There are multiple prominent ruby managers and all of them will probably work. T
 # What do you do
 
 ## Step 1: Install brew and upgrade brew
-First you need to install brew. Homebrew (brew) is a package manager which basically means it helps you install anything and everything that you need. You should already have brew, so I'm not going to get into steps to install it here. If you don't have it installed go to this [link](https://brew.sh/) and run the command under install. 
+First you need to install brew. Homebrew (brew) is a package manager which basically means it helps you install anything and everything that you need. If you don't have it installed go to this [link](https://brew.sh/) and run the command under install. 
 
 If you have brew then you need to make sure your brew is up to date. Run the following:
 ```shell
