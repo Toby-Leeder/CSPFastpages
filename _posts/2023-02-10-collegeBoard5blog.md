@@ -25,7 +25,7 @@ Del Norte crowdsourcing mostly comes in the form of AP stats or AP psych forms. 
 
 # 5.5 and 5.6 notes
 
-There are many different interesting liscense types. I personally am a big fan of open source, not just as a programmer, but also as a user. When something is open source, I have a much higher sense of security. I can trust that it's safe, since if it wasn't safe someone else would have said soemthing about it. 
+There are many different interesting liscense types. I personally am a big fan of open source, not just as a programmer, but also as a user. When something is open source, I have a much higher sense of security. I can trust that it's safe, since if it wasn't safe someone else would have said soemthing about it. As for our own project, since we aren't planning on using our code privately for any purposes, we chose to use a GPL liscense. We want everyone to be able to use our code and any modifications to our code to be shared. 
 
 Some common PII taken in compsci are names, usernames, and a password, though the password is unique. Sometimes, the fitness ones specifically, will ask for weight, height and other important info for creating a workout plan. Good passwords are long and hard to guess. If it's something simple someone doesn't even need an algorithm to crack it. If it's random but short, an algorithm will crack it quickly. One phishing scheme I have learned about was when my instagram got hacked. It took me to a page that looked like an instagram sign on and so I used it. Then my account started sending people dms and posting things, so I emailed facebook and they helped me get my account back. 
 
