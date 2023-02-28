@@ -1,13 +1,21 @@
-<!-- ---
+---
 toc: true
 layout: post
 description: This blog is about the Night At The Museum
-categories: [week_6]
+categories: [week_22]
 title: Night at the Museum
 ---
 
+## CS
+> There are also some cool CS projects that I saw
+Some of the projects I saw were cool like a workout planner and some other unique projects like a game website.
+![]({{ site.baseurl }}/images/ReactionTimeGame.png)
+
+
 ## Ceramics
 > These are some of the ceramics pieces that I saw at the night at the museum. I really liked these pieces because it's a skill set that I don't really have and find very impressive.
+
+
 
 ![]({{ site.baseurl }}/images/theonepieceisreal.jpg)
 
@@ -21,6 +29,3 @@ This is another piece I really liked. Though it isn't finished the design is rea
 
 These pieces were actually made by my twin, Aiden. It's cool to see what he's been working on throughout the year and I think it turned out really well.
 
-## CS
-> There are also some cool CS projects that I saw
-Some of the projects I saw were really cool like a timer to help with school work and a calender with the weather.  -->
