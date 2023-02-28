@@ -45,7 +45,7 @@ description: Binary stuff
                     </td>
                 </tr>
                 <tr>
-                    <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
+                    <td><input type='text' id="digit{{ i }}" Value="0" size="1" ></td>
                 </tr>
             </table>
         </div>
