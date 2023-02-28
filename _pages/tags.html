@@ -26,7 +26,7 @@ search_exclude: true
       <a name="{{ category | slugize }}"></a>
       {% for post in site.categories[category] %}
         {% if post.hide != true %}
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- assign date_format = site.minima.date_format | base: "%b %-d, %Y" -%}
         <article class="archive-item">
           <p class="post-meta post-meta-title"><a class="page-meta" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>  • {{ post.date | date: date_format }}</p>
         </article>

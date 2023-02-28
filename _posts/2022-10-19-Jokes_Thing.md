@@ -40,7 +40,7 @@ title: Fetching jokes thing
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    cache: 'base', // *base, no-cache, reload, force-cache, only-if-cached
     credentials: 'omit', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json'

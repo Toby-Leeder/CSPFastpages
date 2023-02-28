@@ -31,7 +31,7 @@ jtd.onReady = function(ready) {
 //     const navTrigger = document.querySelector('.js-main-nav-trigger');
   
 //     jtd.addEvent(navTrigger, 'click', function(e){
-//       e.preventDefault();
+//       e.preventbase();
 //       var text = navTrigger.innerText;
 //       var textToggle = navTrigger.getAttribute('data-text-toggle');
   
@@ -107,7 +107,7 @@ function initSearch() {
       jtd.addEvent(searchInput, 'keydown', function(e){
         switch (e.keyCode) {
           case 38: // arrow up
-            e.preventDefault();
+            e.preventbase();
             var active = document.querySelector('.search-result.active');
             if (active) {
               active.classList.remove('active');
@@ -118,7 +118,7 @@ function initSearch() {
             }
             return;
           case 40: // arrow down
-            e.preventDefault();
+            e.preventbase();
             var active = document.querySelector('.search-result.active');
             if (active) {
               if (active.parentElement.nextSibling) {
@@ -134,7 +134,7 @@ function initSearch() {
             }
             return;
           case 13: // enter
-            e.preventDefault();
+            e.preventbase();
             var active = document.querySelector('.search-result.active');
             if (active) {
               active.click();
@@ -157,7 +157,7 @@ function initSearch() {
           case 38: // arrow up
           case 40: // arrow down
           case 13: // enter
-            e.preventDefault();
+            e.preventbase();
             return;
         }
   

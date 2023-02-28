@@ -60,7 +60,7 @@ description: Binary stuff
     makeBits(1);
     const inp = document.getElementById("addBit");
     inp.addEventListener("keyup", function() {
-        event.preventDefault;
+        event.preventbase;
         if (event.key === "Enter") {
             makeBits(inp.value);
         }

@@ -165,7 +165,7 @@ jobs:
             config = yaml.load(cfg)
 
           # sync value for baseurl b/w config.yml and settings.ini
-          settings['DEFAULT']['baseurl'] = config['baseurl']
+          settings['base']['baseurl'] = config['baseurl']
           with open(settings_path, 'w') as stg:
             settings.write(stg)
             

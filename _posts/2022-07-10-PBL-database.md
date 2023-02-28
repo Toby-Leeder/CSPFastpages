@@ -1,6 +1,6 @@
 ---
 title: Database CRUD Operations
-layout: default
+layout: base
 description: An advanced example of do database operation asynchronously between JavaScript and Backend Database.
 permalink: /data/database
 image: /images/database.png
@@ -71,7 +71,7 @@ tags: [javascript, fetch, get, post, put]
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      cache: 'base', // *base, no-cache, reload, force-cache, only-if-cached
       credentials: 'omit', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json'
