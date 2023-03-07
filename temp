@@ -4,23 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Page 2 of 2 for Toby-Leeder-CSPFastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>Toby-Leeder-CSPFastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Toby-Leeder-CSPFastpages" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/page2/" />
-<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/page2/" />
+<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/temp" />
+<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/temp" />
 <meta property="og:site_name" content="Toby-Leeder-CSPFastpages" />
-<meta property="og:image" content="https://toby-leeder.github.io/CSPFastpages/images/logo.png" />
 <meta property="og:type" content="website" />
-<link rel="prev" href="https://toby-leeder.github.io/CSPFastpages/" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://toby-leeder.github.io/CSPFastpages/images/logo.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Toby-Leeder-CSPFastpages" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Toby-Leeder-CSPFastpages","image":"https://toby-leeder.github.io/CSPFastpages/images/logo.png","url":"https://toby-leeder.github.io/CSPFastpages/page2/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Toby-Leeder-CSPFastpages","url":"https://toby-leeder.github.io/CSPFastpages/temp"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSPFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://toby-leeder.github.io/CSPFastpages/feed.xml" title="Toby-Leeder-CSPFastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSPFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,59 +69,28 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This is my (Toby’s) website thing. It’s made with fastpages, but you probably already know that.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1 id="posts">Posts</h1>
-
-
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/CSPFastpages/week_3/2022/09/11/appLabPlanning.html">
-    AppLab Plans
-    </a>
-</h3><p class="post-meta-description">This is where I will be planning out my quiz that I'm making in AppLab</p><p class="post-meta">2022-09-11 00:00:00 -0500</p>
-</li><li><h3>
-    <a class="post-link" href="/CSPFastpages/week_2/2022/08/29/alumniPanel.html">
-    Alumni Panel
-    </a>
-</h3><p class="post-meta-description">I was able to listen to computer science alumni in college and gain their advice and insights</p><p class="post-meta">2022-08-29 00:00:00 -0500</p>
-</li><li><h3>
-    <a class="post-link" href="/CSPFastpages/data/database">
-    Database CRUD Operations
-    </a>
-</h3><p class="post-meta-description">An advanced example of do database operation asynchronously between JavaScript and Backend Database.</p><p class="post-meta">2022-07-10 00:00:00 -0500</p>
-</li><li><h3>
-    <a class="post-link" href="/CSPFastpages/week_0/2020/08/20/markdownpost.html">
-    Is this gonna work?
-    </a>
-</h3><p class="post-meta-description">my first markdown post</p><p class="post-meta">2020-08-20 00:00:00 -0500</p>
-</li></ul>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline"></h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="" itemprop="datePublished">
+        
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
     
-      <div class="pager">
-        <ul class="pagination">
-          <li><a href="/CSPFastpages/" class="previous-page">1</a></li>
-          <li><div class="current-page">2</div></li>
-          <li><div class="pager-edge">•</div></li>
-        </ul>
-      </div></div>
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    
+  </div><a class="u-url" href="/CSPFastpages/temp" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/CSPFastpages/"></data>
