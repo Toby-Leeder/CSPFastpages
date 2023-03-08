@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: This blog is about the first Collegeboard quizes I took
-categories: [week_6]
-title: Collegeboard Quizes
+description: This blog is about my Collegeboard MCQ Final tri 2
+categories: []
+title: Collegeboard MCQ Final tri 2
 ---
 
 ![]({{ site.baseurl }}/images/college-board-final.png)
