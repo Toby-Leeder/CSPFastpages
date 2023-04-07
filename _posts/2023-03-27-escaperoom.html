@@ -24,12 +24,12 @@ title: Escape room
         padding: 10px;
         position: relative;
     }
-    .rgb {
+    .door {
         position: absolute;
-        top: 18%;
+        top: 33%;
         left: 80%;
-        height: 63%;
-        width: 18%;
+        height: 57.5%;
+        width: 17%;
     }
     .iframe {
         border: none;
@@ -40,6 +40,14 @@ title: Escape room
         border: none;
         width: 100%;
         height: 100%;
+    }
+    .rgb{
+        position: absolute;
+        top: 60.5%;
+        left: 61%;
+        height: 11%;
+        width: 10.5%;
+        background-image: "{{ site.baseurl }}/images/RGBGuesser.png"
     }
 </style>
 <div class="container">
@@ -65,15 +73,18 @@ title: Escape room
                 const escapeRoom = document.getElementById("escaperoom")
                 escapeRoom.innerHTML = "";
                 var background = document.createElement("img")
-                background.src = "https://user-images.githubusercontent.com/111464932/227806269-2cee2da8-8b0b-413e-9de4-1f2e0f808a58.png"
+                background.src = " {{ site.baseurl }}/images/BinaryGames-img.png"
                 background.classList.add("background")
                 background.id = "background"
                 escapeRoom.appendChild(background)
-                var rgb = document.createElement("div")
-                rgb.classList.add("rgb")
-                rgb.onclick = function(){startRGB()}
-                escapeRoom.appendChild(rgb)
+                escapeRoom.appendChild(makeRGB())
                 break;
         }
+    }
+    function makeRGB(){
+        var rgb = document.createElement("div")
+        rgb.classList.add("rgb")
+        rgb.onclick = function(){startRGB()}
+        return rgb
     }
 </script>
