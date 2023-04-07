@@ -6,7 +6,7 @@ categories: []
 title: Collegeboard MCQ 4
 ---
 
-![]({{ site.baseurl }}/images/college-board-final.png)
+![]({{ site.baseurl }}/images/MCQ4.png)
 
 # MCQ #4
 > 48/50
