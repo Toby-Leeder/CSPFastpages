@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AWS Adventures | Toby-Leeder-CSPFastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="AWS Adventures" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is a chronical of me attempting to learn and use different AWS services." />
+<meta property="og:description" content="This is a chronical of me attempting to learn and use different AWS services." />
+<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/2023/04/12/aws-adventures.html" />
+<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/2023/04/12/aws-adventures.html" />
+<meta property="og:site_name" content="Toby-Leeder-CSPFastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-12T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AWS Adventures" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-12T00:00:00-05:00","datePublished":"2023-04-12T00:00:00-05:00","description":"This is a chronical of me attempting to learn and use different AWS services.","headline":"AWS Adventures","mainEntityOfPage":{"@type":"WebPage","@id":"https://toby-leeder.github.io/CSPFastpages/2023/04/12/aws-adventures.html"},"url":"https://toby-leeder.github.io/CSPFastpages/2023/04/12/aws-adventures.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSPFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://toby-leeder.github.io/CSPFastpages/feed.xml" title="Toby-Leeder-CSPFastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSPFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSPFastpages/">Toby-Leeder-CSPFastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSPFastpages/about/">About Me</a><a class="page-link" href="/CSPFastpages/lessonNotes">Lesson Notes</a><a class="page-link" href="/CSPFastpages/notes/">Notes</a><a class="page-link" href="/CSPFastpages/search/">Search</a><a class="page-link" href="/CSPFastpages/categories/">Tags</a><a class="page-link" href="/CSPFastpages/timeline/">Timeline</a><a class="page-link" href="/CSPFastpages/Vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS Adventures</h1><p class="page-description">This is a chronical of me attempting to learn and use different AWS services.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-12T00:00:00-05:00" itemprop="datePublished">
+        2023-04-12 00:00:00 -0500
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#service-descriptions">Service Descriptions:</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#lambda">Lambda</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#what-is-lambda">What is lambda?</a></li>
+<li class="toc-entry toc-h3"><a href="#how-will-i-use-lambda">How will I use Lambda?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#api-gateway">API Gateway</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#what-is-api-gateway">What is API Gateway?</a></li>
+<li class="toc-entry toc-h3"><a href="#how-will-i-use-api-gateway">How will I use API Gateway&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#first-steps">First Steps</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#the-process">The Process</a></li>
+<li class="toc-entry toc-h2"><a href="#what-went-wrong">What went wrong</a></li>
+</ul>
+</li>
+</ul><h1 id="service-descriptions">
+<a class="anchor" href="#service-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Descriptions:</h1>
+
+<h2 id="lambda">
+<a class="anchor" href="#lambda" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lambda</h2>
+
+<h3 id="what-is-lambda">
+<a class="anchor" href="#what-is-lambda" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is lambda?</h3>
+
+<p>AWS Lambda is essentially a service that allows you to create and run functions for your backend. It basically just runs code when called. Thats kinda the simple way to put it. The code is run on Amazon’s computer infrastructure, and it automatically scales with use.</p>
+
+<h3 id="how-will-i-use-lambda">
+<a class="anchor" href="#how-will-i-use-lambda" aria-hidden="true"><span class="octicon octicon-link"></span></a>How will I use Lambda?</h3>
+
+<p>I’m planning on using Lambda to communicate between computers. I will either use a dynamo table to keep track of all of the players current positions or just send periodic updates to all of the players. The benefit of using Lambdas is that a call to adds something to a database can trigger other clients to pull from the database. That’s why this alternative is better than what I’ve done in previous projects, as I just used continuous api calls to check if it had changed.</p>
+
+<h2 id="api-gateway">
+<a class="anchor" href="#api-gateway" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Gateway</h2>
+
+<h3 id="what-is-api-gateway">
+<a class="anchor" href="#what-is-api-gateway" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is API Gateway?</h3>
+
+<p>API Gateway is another AWS service that can be used in combination with many other services. It creates RESTful APIs that are HTTP based and enable stateless client-server communication. This is essentially a way of managing concurrent API calls.</p>
+
+<h3 id="how-will-i-use-api-gateway">
+<a class="anchor" href="#how-will-i-use-api-gateway" aria-hidden="true"><span class="octicon octicon-link"></span></a>How will I use API Gateway&gt;</h3>
+
+<p>I will be using it with AWS Lambda, though it can be used with many other AWS services. It will essentially act as a manager for my connecting and disconecting from the serverless websocket.</p>
+
+<h1 id="first-steps">
+<a class="anchor" href="#first-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Steps</h1>
+
+<p>The first thing I wanted to do was create a functional websocket on AWS using the method I described above. To do this I followed a tutorial. <a href="https://www.youtube.com/watch?v=FIrzkt7kH80">Here</a> is the video I used, it is very concise and well made. For anyone watching the video, he left out one important thing. Your send message lambda function must also be given special permissions like the connect function, specifically it needs the “AmazonAPIGatwayInvokeFullAccess” policy.</p>
+
+<h2 id="the-process">
+<a class="anchor" href="#the-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Process</h2>
+
+<ol>
+  <li>The first thing I did was create the lambda functions. This part was not shown in the video, so I skipped ahead to where he showed the functions and I just copied them down. I used python 3.9 because that’s what he used. Then I went back to the beginning of the video.</li>
+  <li>The next thing I did was follow his guide pretty much exactly. If you would like to see how to do it, I would just recomend watching the guide (and leaving a like!).</li>
+</ol>
+
+<h2 id="what-went-wrong">
+<a class="anchor" href="#what-went-wrong" aria-hidden="true"><span class="octicon octicon-link"></span></a>What went wrong</h2>
+<ul>
+  <li>Permissions bug: I didn’t know initially why I was getting the bug, but I read the error message and it said something about permission being denied. The video had already told us to add a permission to our connection lambda function, so I just assumed that might be the issue and added every permission related to APIGateways and Lambdas. After that I systematically removed permissions until I found the one permission that fixed my errors. I actually just got really lucky and my first guess was the correct one, so I didn’t really have to test that much. That fixed that error.</li>
+  <li>Testing: I was trying to test it with my friend on seperate computers and initially it worked fine. However when I tried to join it appeared to break for some reason. The only way to find someones connectionID for now was to go to the CloudWatch logs and find it in the statement that got printed. However when I looked, I didn’t see a new connection. Then I checked the event my friend had logged and my connection outputs were in that same event. I wasn’t expecting this, I thought it would create a seperate event for each instance it’s called, but apparently it does not.</li>
+</ul>
+
+  </div><a class="u-url" href="/CSPFastpages/2023/04/12/aws-adventures.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSPFastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://toby-leeder.github.io/CSPFastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSPFastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

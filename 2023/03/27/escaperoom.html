@@ -132,14 +132,31 @@ window.onload = wrap_img;
         width: 10.5%;
         background-image: "/CSPFastpages/images/RGBGuesser.png"
     }
+    .rgb:hover{
+        background-color: rgba(100,100,100,0.3)
+    }
+    .indicator{
+        position: absolute;
+        height: 100%;
+        width: 15%;
+        left: 85%;
+        border-radius: 100% 0 0 100%/50% 0 0 50%;
+        background: rgba(100,100,100,0);
+        transition: 1s;
+    }
+    .indicator:hover{
+        background: rgba(100,100,100,0.3);
+    }
 </style>
 <div class="container">
     <div class="escaperoom" id="escaperoom">
     </div>
 </div>
 <script>
+    var backgrounds = {
+        1 : "/CSPFastpages/images/BinaryGames-img.png"
+    }
     buildRoom(1)
-    console.log("running")
     function startRGB(){
         document.getElementById("escaperoom").innerHTML = "";
         const iframe = document.createElement("iframe");
@@ -148,27 +165,34 @@ window.onload = wrap_img;
         document.getElementById("escaperoom").appendChild(iframe);
     }
 
-
     function buildRoom(roomNum){
+        const escapeRoom = document.getElementById("escaperoom")
+        escapeRoom.innerHTML = "";
         switch(roomNum){
             case 1:
-                console.log("awesome")
-                const escapeRoom = document.getElementById("escaperoom")
-                escapeRoom.innerHTML = "";
-                var background = document.createElement("img")
-                background.src = " /CSPFastpages/images/BinaryGames-img.png"
-                background.classList.add("background")
-                background.id = "background"
-                escapeRoom.appendChild(background)
+                escapeRoom.appendChild(makeBackground(roomNum))
                 escapeRoom.appendChild(makeRGB())
+                // escapeRoom.appendChild(makeIndicator())
                 break;
         }
+    }
+    function makeBackground(num){
+        var background = document.createElement("img");
+        background.src = backgrounds[num];
+        background.classList.add("background");
+        background.id = "background";
+        return background
     }
     function makeRGB(){
         var rgb = document.createElement("div")
         rgb.classList.add("rgb")
         rgb.onclick = function(){startRGB()}
         return rgb
+    }
+    function makeIndicator(){
+        var indicator = document.createElement("div");
+        indicator.classList.add("indicator")
+        return indicator
     }
 </script>
   </div><a class="u-url" href="/CSPFastpages/2023/03/27/escaperoom.html" hidden></a>
