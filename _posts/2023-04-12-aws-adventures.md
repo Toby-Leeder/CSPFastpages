@@ -41,3 +41,10 @@ The first thing I wanted to do was create a functional websocket on AWS using th
 ## What went wrong
 - Permissions bug: I didn't know initially why I was getting the bug, but I read the error message and it said something about permission being denied. The video had already told us to add a permission to our connection lambda function, so I just assumed that might be the issue and added every permission related to APIGateways and Lambdas. After that I systematically removed permissions until I found the one permission that fixed my errors. I actually just got really lucky and my first guess was the correct one, so I didn't really have to test that much. That fixed that error.
 - Testing: I was trying to test it with my friend on seperate computers and initially it worked fine. However when I tried to join it appeared to break for some reason. The only way to find someones connectionID for now was to go to the CloudWatch logs and find it in the statement that got printed. However when I looked, I didn't see a new connection. Then I checked the event my friend had logged and my connection outputs were in that same event. I wasn't expecting this, I thought it would create a seperate event for each instance it's called, but apparently it does not. 
+
+
+### Calling a Lambda from a Lambda
+
+This was something I needed to do after running into an error. Essentially, I wanted the connectionId to be sent back to the client as soon as they connect to the websocket. However when I tried to add this functionality into the connection lambda, it tried to send it before it had finished connecting and it didn't work the way I wanted it to. My solution was to just call a second lambda from within the first lambda. I found another [youtube video](https://www.youtube.com/watch?v=Lf98s3NczBE) about it and followed his step by step, including creating my own invoke lambda IAM role to give the lambda the right permissions. It worked first try. 
+
+![]({{ site.baseurl }}/images/LambdaFlowchart.jpg)

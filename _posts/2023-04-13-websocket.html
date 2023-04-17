@@ -1,0 +1,35 @@
+---
+toc: true
+layout: post
+description: 
+categories: []
+title: Websocket
+---
+
+<script>
+    const socket = new WebSocket("wss://03v9oyn6p8.execute-api.us-east-2.amazonaws.com/testing")
+
+    socket.addEventListener("open", e => {
+        console.log("Websocket is connected")
+    })
+
+    socket.addEventListener("close", e => {
+        console.log("Websocket is closed")
+    })
+
+    socket.addEventListener("error", e => {
+        console.log("error'", e)
+    })
+
+    socket.addEventListener("message", message => {
+        console.log("message recieved", message.data)
+    })
+
+    function send(message){
+        const messageObj = {
+            "action": "bgSendMessage",
+            "message": "Testing Testing 123"
+        }
+        socket.send(JSON.stringify(messageObj))
+    }
+</script>
