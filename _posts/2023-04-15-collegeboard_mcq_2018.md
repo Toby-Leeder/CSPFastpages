@@ -10,6 +10,7 @@ title: Collegeboard MCQ 2018
 
 # 2018 MCQ 
 > 60/66 <br>
+
 Q51: I didn't really know what the difference between symetric and asymetric encryption was. Now I know, asymetric uses two seperate keys, while symetric encryptioon uses a single key. <br>
 Q47: Same as above, I didn't know what asymetric or symetric encryption was. Safin helped me though, he told me this was an example of asymetric encryption, where anyone can use the public key and only the recipient with the private key can decrypt it. <br>
 Q43: Again I thought O(n^2) was unreasonable but it actually is reasonable. <br>
