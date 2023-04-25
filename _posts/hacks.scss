@@ -1,0 +1,17 @@
+
+
+@mixin cool{
+    color:#0000ff;
+    border: red;
+}
+
+div {
+    .cool{
+        @include cool;
+    }
+    .notCool{
+        @extend cool;
+        color: black;
+    }
+}
+

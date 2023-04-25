@@ -27,6 +27,7 @@ title: Websocket
         console.log("message recieved", message.data)
         var m = document.createElement("p")
         m.innerHTML = ("message recieved" + message.data)
+        m.classList.add("cool")
         document.getElementById("main").appendChild(m)
     })
 
