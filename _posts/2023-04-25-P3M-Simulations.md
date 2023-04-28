@@ -94,7 +94,6 @@ suits = ["Diamonds", "Hearts", "Spades", "Clubs"]
 print(random.choice(cards) + " of " + random.choice(suits))
 ```
 
-    6 of Spades
 
 
 ### Coin Flip
@@ -133,19 +132,19 @@ weightedCoinFlip()
 weightedCoinFlip()
 
 ```
-
-    unweighted:
-    Tails
-    Tails
-    Tails
-    Tails
-    Tails
-    weighted:
-    Tails
-    Heads
-    Heads
-    Tails
-    Heads
+   
+unweighted:
+Tails
+Tails
+Tails
+Tails
+Tails
+weighted:
+Tails
+Heads
+Heads
+Tails
+Heads
 
 
 Your turn: Change the code to make it simulate the flipping of a weighted coin.
@@ -155,7 +154,7 @@ Your turn: Change the code to make it simulate the flipping of a weighted coin.
 - Add a heads and tails images into your images directory with the correct names and run the code below
 
 
-```python
+'''python
 import random
 
 # importing Image class from PIL package
@@ -176,7 +175,7 @@ else:
     display(image)
 ```
 
-    heads
+heads
 
 
 
@@ -218,8 +217,6 @@ else:
     print("You got more Blue than Red")
     display(Image.open(r"images/blue.png"))
 
-
-
 ```
 
     Spin the wheel!
@@ -257,38 +254,38 @@ while totalPopulation < 1000000:
 print(dayCount)
 ```
 
-    50.14019267336515
-    50.28077842644361
-    924471.390705649
-    927063.4730199015
-    929662.8231531383
-    932269.4614832586
-    934883.408445299
-    937504.6845315925
-    940133.3102919292
-    942769.306333718
-    945412.6933221479
-    948063.4919803509
-    950721.7230895628
-    953387.4074892879
-    956060.5660774591
-    958741.2198106066
-    961429.3897040186
-    964125.096831907
-    966828.3623275728
-    969539.2073835713
-    972257.6532518797
-    974983.721244062
-    977717.4327314354
-    980458.8091452414
-    983207.8719768105
-    985964.6427777322
-    988729.1431600227
-    991501.3947962954
-    994281.4194199304
-    997069.2388252458
-    999864.8748676664
-    198075
+50.14019267336515
+50.28077842644361
+924471.390705649
+927063.4730199015
+929662.8231531383
+932269.4614832586
+934883.408445299
+937504.6845315925
+940133.3102919292
+942769.306333718
+945412.6933221479
+948063.4919803509
+950721.7230895628
+953387.4074892879
+956060.5660774591
+958741.2198106066
+961429.3897040186
+964125.096831907
+966828.3623275728
+969539.2073835713
+972257.6532518797
+974983.721244062
+977717.4327314354
+980458.8091452414
+983207.8719768105
+985964.6427777322
+988729.1431600227
+991501.3947962954
+994281.4194199304
+997069.2388252458
+999864.8748676664
+198075
 
 
 Here we initialize the total population to be 50, then set the growth factor as 1.00005 (.005 percent change). It will print the population every 56th day until it reaches one million. It multiplies the current population by the growth factor in each iteration, and increments the day count. When the day count reaches 56, it prints the current population and resets the day count to 0.
@@ -353,7 +350,7 @@ naturaldisaster = ["flood", "drought", "fire", "hurricane", "dustbowl"]
 print("When a" , random.choice(naturaldisaster) , "hit",  random.choice(height), "birds died") 
 ```
 
-    When a dustbowl hit medium birds died
+When a dustbowl hit medium birds died
 
 
 How does this simulation have bias?
