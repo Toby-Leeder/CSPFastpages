@@ -6,7 +6,10 @@
       </td>
 
         {% for notebook in site.posts %}
-
+        <td>
+          <a href="{{ site.baseurl }}{{ notebook.url }}">{{ notebook.title }}</a>
+        </td>
+        <p>WORKING</p>
             {% if notebook.categories contains "lessons" %}
     
           <td>
