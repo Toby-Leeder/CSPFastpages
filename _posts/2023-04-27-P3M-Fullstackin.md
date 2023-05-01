@@ -1,27 +1,10 @@
 ---
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.5
-  kernelspec:
-    display_name: base
-    language: python
-    name: python3
+toc: true
+layout: post
+description: Big Idea 3 with Databases and Data Operations
+categories: []
+title: P3 4/27 Big Idea 3 Data Structures
 ---
-
-# P3 4/27 Big Idea 3 Data Structures
-> Big Idea 3 with Databases and Data Operations
-- toc: true
-- badges: false
-- comments: true
-- author: Alex, David, Kaiden, Ethan T.,Ethan Z., Navan, Nikhil 
-- categories: [student]
-- type: ap
-- week: 31
-
 
 ### Leaderboard Database
 > How do you set up a database model?
@@ -1063,7 +1046,7 @@ You can also message us on the coding Slack channel for additional help.
 
 # HACKS ARE DUE SATURDAY (4/29) 11:59 PM 
 
-```python vscode={"languageId": "javascript"}
+```javascript 
 import random
 
 def quickSort(list):
