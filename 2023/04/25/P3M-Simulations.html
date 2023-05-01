@@ -101,13 +101,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#coin-flip">Coin Flip</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#adding-images-in-python">Adding images (in Python)</a>
+<li class="toc-entry toc-h2"><a href="#adding-images-in-python">Adding images (in Python)</a></li>
+<li class="toc-entry toc-h1"><a href="#importing-image-class-from-pil-package">importing Image class from PIL package</a></li>
+<li class="toc-entry toc-h1"><a href="#creating-a-object">creating a object</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#spin-the-wheel">Spin the Wheel</a></li>
-</ul>
-</li>
 <li class="toc-entry toc-h2"><a href="#population-growth-and-plots">Population Growth and Plots</a></li>
 <li class="toc-entry toc-h2"><a href="#example-on-how-simplification-can-cause-bias">Example on how simplification can cause bias</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#js-examples">JS examples</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#hacks">Hacks</a></li>
@@ -220,9 +221,6 @@ daysStarving ← 0
 <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">cards</span><span class="p">)</span> <span class="o">+</span> <span class="s">" of "</span> <span class="o">+</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">suits</span><span class="p">))</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 of Spades
-</code></pre></div></div>
-
 <h3 id="coin-flip">
 <a class="anchor" href="#coin-flip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coin Flip</h3>
 
@@ -259,7 +257,7 @@ daysStarving ← 0
 
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unweighted:
+<p>unweighted:
 Tails
 Tails
 Tails
@@ -270,8 +268,7 @@ Tails
 Heads
 Heads
 Tails
-Heads
-</code></pre></div></div>
+Heads</p>
 
 <p>Your turn: Change the code to make it simulate the flipping of a weighted coin.</p>
 
@@ -282,64 +279,69 @@ Heads
   <li>Add a heads and tails images into your images directory with the correct names and run the code below</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<p>’'’python
+import random</p>
 
-<span class="c1"># importing Image class from PIL package
-</span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<h1 id="importing-image-class-from-pil-package">
+<a class="anchor" href="#importing-image-class-from-pil-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>importing Image class from PIL package</h1>
+<p>from PIL import Image</p>
+
+<h1 id="creating-a-object">
+<a class="anchor" href="#creating-a-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>creating a object</h1>
+<p>im = Image.open(r”images/heads.png”)
+image = Image.open(r”images/tails.png”)</p>
+
+<p>i=random.randint(0,1)</p>
+
+<p>if i == 1:
+    print(“heads”)
+    display(im)</p>
+
+<p>else:
+    print(“tails”)
+    display(image)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+heads
+
+
+
+    
+![png](2023-04-25-P3M-Simulations_files/2023-04-25-P3M-Simulations_19_1.png)
+    
+
+
+In order to display an image in python, we can use the PIL package we previously learned about.
+
+### Spin the Wheel
+
+
+```python
+import random
+
+print("Spin the wheel!")
+print("----------------------------------")
+
+n = 300
+blue = 0
+red = 0
  
-<span class="c1"># creating a object
-</span><span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s">"images/heads.png"</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s">"images/tails.png"</span><span class="p">)</span>
-
-<span class="n">i</span><span class="o">=</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"heads"</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
-
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"tails"</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>heads
-</code></pre></div></div>
-
-<p><img src="2023-04-25-P3M-Simulations_files/2023-04-25-P3M-Simulations_19_1.png" alt="png"></p>
-
-<p>In order to display an image in python, we can use the PIL package we previously learned about.</p>
-
-<h3 id="spin-the-wheel">
-<a class="anchor" href="#spin-the-wheel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spin the Wheel</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">"Spin the wheel!"</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"----------------------------------"</span><span class="p">)</span>
-
-<span class="n">n</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">blue</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">red</span> <span class="o">=</span> <span class="mi">0</span>
+for i in range(n):
+    spin = random.randint(1,2)
+    if spin == 1: # head
+        blue = blue + 1
+    else:         # tail
+        red = red + 1
  
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">spin</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">spin</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># head
-</span>        <span class="n">blue</span> <span class="o">=</span> <span class="n">blue</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>         <span class="c1"># tail
-</span>        <span class="n">red</span> <span class="o">=</span> <span class="n">red</span> <span class="o">+</span> <span class="mi">1</span>
- 
-<span class="k">print</span><span class="p">(</span><span class="s">'Number of blue:'</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Number of red:'</span><span class="p">,</span> <span class="n">red</span><span class="p">)</span>
-<span class="k">print</span><span class="p">()</span>
+print('Number of blue:', blue)
+print('Number of red:', red)
+print()
 
-<span class="k">if</span> <span class="p">(</span><span class="n">red</span> <span class="o">&gt;</span> <span class="n">blue</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"You got more Red than Blue"</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s">"images/red.png"</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"You got more Blue than Red"</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s">"images/blue.png"</span><span class="p">))</span>
-
-
+if (red &gt; blue):
+    print("You got more Red than Blue")
+    display(Image.open(r"images/red.png"))
+else:
+    print("You got more Blue than Red")
+    display(Image.open(r"images/blue.png"))
 
 </code></pre></div></div>
 
@@ -373,7 +375,7 @@ You got more Red than Blue
 <span class="k">print</span><span class="p">(</span><span class="n">dayCount</span><span class="p">)</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>50.14019267336515
+<p>50.14019267336515
 50.28077842644361
 924471.390705649
 927063.4730199015
@@ -404,8 +406,7 @@ You got more Red than Blue
 994281.4194199304
 997069.2388252458
 999864.8748676664
-198075
-</code></pre></div></div>
+198075</p>
 
 <p>Here we initialize the total population to be 50, then set the growth factor as 1.00005 (.005 percent change). It will print the population every 56th day until it reaches one million. It multiplies the current population by the growth factor in each iteration, and increments the day count. When the day count reaches 56, it prints the current population and resets the day count to 0.</p>
 
@@ -462,8 +463,7 @@ You got more Red than Blue
 <span class="k">print</span><span class="p">(</span><span class="s">"When a"</span> <span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">naturaldisaster</span><span class="p">)</span> <span class="p">,</span> <span class="s">"hit"</span><span class="p">,</span>  <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="s">"birds died"</span><span class="p">)</span> 
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>When a dustbowl hit medium birds died
-</code></pre></div></div>
+<p>When a dustbowl hit medium birds died</p>
 
 <p>How does this simulation have bias?</p>
 
