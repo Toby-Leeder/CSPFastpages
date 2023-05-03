@@ -18,7 +18,7 @@ Q42: I'm still not very good at binary stuff. If you added 96 bits then you have
 Q30: I can't read. I didn't see the extra analysis in the first line. <br>
 
 
-![]({{ site.baseurl }}/MCQ2020.png)
+![]({{ site.baseurl }}/images/2020MCQ.png)
 
 # 2020 MCQ 
 > 64/67 <br>
