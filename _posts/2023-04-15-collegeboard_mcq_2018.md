@@ -16,3 +16,12 @@ Q47: Same as above, I didn't know what asymetric or symetric encryption was. Saf
 Q43: Again I thought O(n^2) was unreasonable but it actually is reasonable. <br>
 Q42: I'm still not very good at binary stuff. If you added 96 bits then you have 2^96 times more possible combinations. <br>
 Q30: I can't read. I didn't see the extra analysis in the first line. <br>
+
+
+![]({{ site.baseurl }}/images/MCQ2020.png)
+
+# 2020 MCQ 
+> 64/67 <br>
+Q54: I didn't think about the order that the numbers were put in. <br>
+Q45: I forgot that three 0s would also be winning in this case. <br>
+Q39: I didn't look close enough at the code to realize that it adds i too soon. <br>
