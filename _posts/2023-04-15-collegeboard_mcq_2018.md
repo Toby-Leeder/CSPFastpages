@@ -25,3 +25,10 @@ Q30: I can't read. I didn't see the extra analysis in the first line. <br>
 Q54: I didn't think about the order that the numbers were put in. <br>
 Q45: I forgot that three 0s would also be winning in this case. <br>
 Q39: I didn't look close enough at the code to realize that it adds i too soon. <br>
+
+
+![]({{ site.baseurl }}/images/MCQ2021.png)
+# 2021 MCQ
+> 68/70 <br>
+Q63: I think I didn't closely read the problem. <br>
+Q50: I forgot what symmetric encryption was and confused it with public key encryption. <br>
