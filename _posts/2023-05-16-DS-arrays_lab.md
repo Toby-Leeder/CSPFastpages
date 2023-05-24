@@ -1,7 +1,10 @@
-# Python 2D Iteration and Animation
-> Several 2D arrays and Animations hacks are provided to further learn iteration and data in Python.  The objective is to build a stronger foundation in iteration and data.  Also, it is important to see concepts like printing color and moving objects in terminal, prior to moving to frontend development with JavaScript.
-
-- toc: true
+---
+toc: true
+layout: post
+description: Several 2D arrays and Animations hacks are provided to further learn iteration and data in Python.  The objective is to build a stronger foundation in iteration and data.  Also, it is important to see concepts like printing color and moving objects in terminal, prior to moving to frontend development with JavaScript.
+categories: []
+title: Python 2D Iteration and Animation
+---
 
 ## 2D Programming and Resources
 > There are lots of applications for 2D data.  Common terms in 2D are tabular data, row/columns, matrix, etc.  Nested iterative loops are often used to find or discover each cell in a 2D array.

@@ -1,10 +1,10 @@
-# Sorting Algorithms
-> Working with Data Structures and manipulating data.
-
-- toc: true
-- categories: []
-
-[wget link](https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-05-15-DS-sorting.ipynb)
+---
+toc: true
+layout: post
+description: Working with Data Structures and manipulating data.
+categories: []
+title: Sorting Algorithms
+---
 
 
 ```python
