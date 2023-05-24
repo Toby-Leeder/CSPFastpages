@@ -1,16 +1,109 @@
-<h1 id="sorting-algorithms">Sorting Algorithms</h1>
-<blockquote>
-  <p>Working with Data Structures and manipulating data.</p>
-</blockquote>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sorting Algorithms | Toby-Leeder-CSPFastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Sorting Algorithms" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Working with Data Structures and manipulating data." />
+<meta property="og:description" content="Working with Data Structures and manipulating data." />
+<link rel="canonical" href="https://toby-leeder.github.io/CSPFastpages/2023/05/15/DS-sorting.html" />
+<meta property="og:url" content="https://toby-leeder.github.io/CSPFastpages/2023/05/15/DS-sorting.html" />
+<meta property="og:site_name" content="Toby-Leeder-CSPFastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sorting Algorithms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"Working with Data Structures and manipulating data.","headline":"Sorting Algorithms","mainEntityOfPage":{"@type":"WebPage","@id":"https://toby-leeder.github.io/CSPFastpages/2023/05/15/DS-sorting.html"},"url":"https://toby-leeder.github.io/CSPFastpages/2023/05/15/DS-sorting.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSPFastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://toby-leeder.github.io/CSPFastpages/feed.xml" title="Toby-Leeder-CSPFastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSPFastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSPFastpages/">Toby-Leeder-CSPFastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSPFastpages/about/">About Me</a><a class="page-link" href="/CSPFastpages/lessonNotes">Lesson Notes</a><a class="page-link" href="/CSPFastpages/notes/">Notes</a><a class="page-link" href="/CSPFastpages/search/">Search</a><a class="page-link" href="/CSPFastpages/categories/">Tags</a><a class="page-link" href="/CSPFastpages/timeline/">Timeline</a><a class="page-link" href="/CSPFastpages/Vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sorting Algorithms</h1><p class="page-description">Working with Data Structures and manipulating data.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-15T00:00:00-05:00" itemprop="datePublished">
+        2023-05-15 00:00:00 -0500
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      24 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#warm-up">Warm Up</a></li>
+<li class="toc-entry toc-h1"><a href="#explore">Explore</a>
 <ul>
-  <li>toc: true</li>
-  <li>categories: []</li>
+<li class="toc-entry toc-h2"><a href="#practice">Practice</a></li>
 </ul>
-
-<p><a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-05-15-DS-sorting.ipynb">wget link</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+</li>
+<li class="toc-entry toc-h1"><a href="#sorting-words">Sorting Words</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#bubble-sort-poopcorn-hack">Bubble Sort Poopcorn Hack</a></li>
+<li class="toc-entry toc-h2"><a href="#selection-sort-poopcorn-hack">Selection Sort Poopcorn Hack</a></li>
+<li class="toc-entry toc-h2"><a href="#discuss">Discuss</a></li>
+<li class="toc-entry toc-h2"><a href="#hacks">HACKS</a></li>
+</ul>
+</li>
+</ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
@@ -23,7 +116,8 @@
 [575, 698, 687, 758, 915, 12, 554, 223, 143, 55, 549, 122, 985, 754, 573, 369, 925, 455, 215, 177, 272, 374, 119, 152, 643, 899, 386, 798, 440, 417, 523, 226, 880, 155, 212, 430, 824, 892, 412, 17, 432, 630, 949, 953, 33, 266, 601, 84, 186, 628, 890, 696, 160, 296, 606, 201, 345, 145, 593, 462, 446, 448, 112, 726, 568, 360, 568, 118, 81, 962, 376, 932, 889, 761, 663, 71, 282, 456, 772, 123, 551, 461, 319, 397, 665, 864, 262, 604, 270, 866, 809, 115, 779, 220, 713, 164, 968, 532, 474, 399, 884, 467, 577, 971, 663, 201, 660, 669, 413, 959, 401, 919, 111, 133, 960, 651, 885, 570, 659, 418, 303, 957, 878, 977, 889, 253, 753, 143, 384, 15, 160, 704, 280, 634, 888, 177, 387, 595, 474, 216, 178, 845, 91, 432, 321, 713, 406, 298, 548, 496, 967, 244, 381, 40, 429, 80, 765, 949, 513, 45, 613, 843, 745, 352, 376, 209, 910, 995, 267, 776, 676, 759, 785, 567, 77, 854, 91, 83, 977, 508, 835, 442, 598, 622, 473, 389, 878, 6, 426, 749, 884, 521, 811, 196, 749, 689, 995, 388, 504, 113, 275, 597, 653, 547, 999, 934, 929, 817, 124, 685, 93, 155, 208, 334, 69, 856, 856, 618, 43, 211, 462, 821, 604, 64, 302, 583, 83, 158, 46, 509, 671, 495, 93, 825, 876, 392, 644, 128, 298, 601, 472, 215, 388, 825, 328, 780, 906, 910, 136, 391, 839, 879, 135, 149, 742, 996, 697, 456, 764, 28, 869, 355, 905, 381, 614, 186, 883, 754, 911, 266, 266, 401, 92, 54, 485, 722, 31, 130, 314, 23, 673, 594, 284, 903, 860, 777, 811, 167, 626, 166, 281, 634, 82, 449, 193, 380, 542, 640, 680, 636, 605, 694, 787, 157, 234, 546, 945, 751, 427, 312, 155, 933, 102, 931, 537, 307, 80, 98, 471, 752, 860, 598, 757, 235, 978, 936, 324, 664, 812, 617, 10, 953, 921, 496, 10, 177, 10, 755, 646, 875, 65, 751, 518, 967, 119, 722, 999, 694, 739, 344, 311, 973, 392, 678, 24, 634, 490, 890, 603, 105, 565, 662, 618, 86, 609, 233, 654, 513, 793, 122, 700, 836, 626, 5, 307, 282, 539, 503, 714, 693, 478, 606, 809, 298, 369, 412, 19, 747, 101, 641, 278, 84, 638, 675, 884, 463, 680, 705, 3, 985, 759, 997, 779, 85, 751, 615, 513, 139, 64, 656, 346, 306, 283, 180, 161, 880, 294, 356, 910, 282, 188, 383, 871, 255, 94, 294, 688, 575, 464, 72, 426, 120, 841, 676, 315, 211, 463, 460, 581, 623, 89, 562, 177, 355, 607, 496, 69, 185, 915, 454, 720, 891, 115, 724, 326, 204, 66, 372, 747, 648, 254, 284, 104, 243, 59, 428, 2, 193, 202, 109, 329, 379, 44, 15, 639, 942, 967, 803, 559, 74, 407, 803, 195, 111, 362, 552, 266, 353, 504, 524, 706, 251, 802, 68, 497, 15, 151, 747, 693, 523, 285, 733, 692, 788, 51, 280, 943, 550, 317, 504, 822, 35, 982, 203, 473, 636, 848, 223, 327, 202, 923, 954, 610, 127, 707, 272, 259, 705, 242, 17, 488, 77, 584, 63, 864, 545, 84, 773, 555, 4, 172, 695, 630, 33, 925, 98, 836, 437, 136, 846, 552, 374, 278, 424, 505, 770, 855, 232, 868, 715, 127, 864, 438, 786, 216, 322, 653, 914, 53, 250, 510, 266, 621, 617, 38, 888, 488, 965, 250, 252, 749, 816, 968, 198, 86, 720, 818, 329, 447, 537, 654, 620, 660, 919, 467, 919, 710, 877, 234, 682, 52, 909, 221, 227, 378, 771, 622, 305, 696, 222, 1000, 520, 346, 558, 150, 577, 791, 409, 913, 340, 133, 545, 505, 582, 671, 691, 160, 166, 782, 541, 734, 33, 264, 805, 561, 314, 62, 115, 439, 595, 629, 32, 784, 322, 744, 731, 819, 233, 648, 74, 167, 292, 617, 332, 565, 812, 246, 183, 217, 728, 434, 93, 136, 342, 255, 640, 219, 32, 967, 253, 755, 578, 315, 313, 13, 510, 841, 652, 609, 586, 989, 837, 23, 970, 904, 119, 37, 991, 842, 180, 734, 99, 907, 949, 112, 130, 666, 140, 951, 897, 158, 894, 699, 56, 247, 662, 244, 709, 840, 22, 997, 673, 136, 795, 229, 628, 920, 766, 249, 384, 906, 734, 251, 991, 574, 307, 639, 947, 544, 645, 49, 357, 798, 416, 859, 817, 645, 340, 883, 709, 640, 78, 832, 407, 394, 448, 173, 94, 343, 693, 181, 974, 590, 196, 303, 322, 290, 284, 10, 583, 742, 748, 346, 924, 772, 91, 823, 507, 577, 724, 263, 774, 316, 673, 5, 673, 107, 555, 136, 230, 882, 341, 277, 447, 870, 304, 26, 517, 733, 904, 165, 314, 750, 488, 452, 726, 509, 909, 718, 207, 211, 417, 871, 87, 689, 928, 734, 187, 482, 27, 830, 464, 57, 206, 743, 620, 104, 606, 457, 824, 563, 46, 485, 362, 92, 801, 493, 331, 851, 83, 124, 599, 623, 932, 538, 37, 800, 444, 340, 594, 7, 336, 594, 929, 596, 71, 48, 839, 630, 516, 761, 34, 397, 49, 165, 632, 265, 504, 129, 739, 451, 503, 982, 273, 758, 43, 731, 912, 435, 621, 112, 960, 681, 472, 591, 98, 824, 16, 815, 304, 949, 186, 331, 50, 359, 983, 674, 539, 172, 710, 903, 571, 908, 77, 918, 244, 351, 122, 58, 109, 590, 481, 255, 937, 893, 257, 548, 159, 271, 961, 899, 671, 774, 131, 770, 446, 975, 457, 253, 105, 755, 382, 165, 992, 758, 860, 223, 501, 445, 389, 699, 223, 104, 8, 570, 702, 219, 257, 468, 47, 715, 480, 268, 661, 314, 258, 458, 426, 721, 137, 557, 321, 105, 25, 511, 84, 675, 688, 835, 238, 517, 255, 191, 431, 805, 557, 989, 995, 466, 296, 108, 520, 229, 873, 205, 370, 912, 380, 488, 533, 828, 725, 52, 198, 887, 228, 95, 167, 471, 806, 619, 938, 954, 135, 303, 931, 143, 892, 772, 870]
 </code></pre></div></div>
 
-<h1 id="warm-up">Warm Up</h1>
+<h1 id="warm-up">
+<a class="anchor" href="#warm-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warm Up</h1>
 
 <blockquote>
   <p>Discuss with a partner… 
@@ -33,7 +127,8 @@ What are some strategies you would use to sort this list? (Don’t worry about w
   </ul>
 </blockquote>
 
-<h1 id="explore">Explore</h1>
+<h1 id="explore">
+<a class="anchor" href="#explore" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore</h1>
 
 <p>Get into groups of 3</p>
 
@@ -41,7 +136,7 @@ What are some strategies you would use to sort this list? (Don’t worry about w
 
 <p>We will look at the first one together, Bubble Sort</p>
 
-<p><img src="images/bubble-sort.png" alt="" /></p>
+<p><img src="images/bubble-sort.png" alt=""></p>
 
 <p>What is happening with this sort?</p>
 
@@ -54,7 +149,8 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 
 <p><a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion</a></p>
 
-<h2 id="practice">Practice</h2>
+<h2 id="practice">
+<a class="anchor" href="#practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice</h2>
 
 <p>[75, 17, 46, 80, 67, 45, 69, 79, 40, 0]</p>
 
@@ -80,7 +176,8 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
   </li>
 </ul>
 
-<h1 id="sorting-words">Sorting Words</h1>
+<h1 id="sorting-words">
+<a class="anchor" href="#sorting-words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting Words</h1>
 <blockquote>
   <p>Sorting strings works in the same way as integers. Using your expertise algorithm, sort the following list of random words.</p>
 </blockquote>
@@ -114,7 +211,8 @@ Random List
 [nltk_data]   Unzipping corpora/words.zip.
 </code></pre></div></div>
 
-<h2 id="bubble-sort-poopcorn-hack">Bubble Sort Poopcorn Hack</h2>
+<h2 id="bubble-sort-poopcorn-hack">
+<a class="anchor" href="#bubble-sort-poopcorn-hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bubble Sort Poopcorn Hack</h2>
 <blockquote>
   <p>Mortensen did this hack in class.</p>
 </blockquote>
@@ -149,7 +247,8 @@ Random List
 ['amyloid', 'cered', 'copelate', 'gangliocyte', 'intertubular', 'paradoxidian', 'pyruline', 'reckoning', 'samesome', 'semihyperbolical']
 </code></pre></div></div>
 
-<h2 id="selection-sort-poopcorn-hack">Selection Sort Poopcorn Hack</h2>
+<h2 id="selection-sort-poopcorn-hack">
+<a class="anchor" href="#selection-sort-poopcorn-hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection Sort Poopcorn Hack</h2>
 <blockquote>
   <p>Mortensen did this hack in class.</p>
 </blockquote>
@@ -183,7 +282,8 @@ Random List
 ['Pacht', 'accipient', 'ainoi', 'diaminogen', 'elegant', 'faddism', 'marvelry', 'rampageously', 'tweak', 'unpalatial']
 </code></pre></div></div>
 
-<h2 id="discuss">Discuss</h2>
+<h2 id="discuss">
+<a class="anchor" href="#discuss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discuss</h2>
 <p>Answer the following with your group.</p>
 
 <ul>
@@ -198,7 +298,8 @@ Select the algorithm you believe is best for each, explain.</li>
   </li>
 </ul>
 
-<h2 id="hacks">HACKS</h2>
+<h2 id="hacks">
+<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>HACKS</h2>
 <blockquote>
   <p>Provided below is a Bubble Sort Algorithm sorting a list of dictionaries based off of selected key.</p>
 </blockquote>
@@ -350,3 +451,37 @@ city
 [{'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}]
 </code></pre></div></div>
 
+
+  </div><a class="u-url" href="/CSPFastpages/2023/05/15/DS-sorting.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSPFastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://toby-leeder.github.io/CSPFastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSPFastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
