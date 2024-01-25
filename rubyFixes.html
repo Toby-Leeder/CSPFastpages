@@ -137,8 +137,8 @@ window.onload = wrap_img;
 
 <h2 id="step-5-configure-your-shell">Step 5: Configure your shell</h2>
 <p>My understanding of this is right now your computer wants to use the built in ruby version so we need to change it so that it uses the correct path. to do that run these three commands (don’t worry when it doesn’t say anything after you run the command, nothing is supposed to happen in terminal):</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"source </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/chruby.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"source </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/auto.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">". </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/chruby.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">". </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/auto.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
 <span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"chruby ruby-2.7.7"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
 </code></pre></div></div>
 
